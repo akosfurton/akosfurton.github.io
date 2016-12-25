@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Example content
+comments: True
+permalink: example-content
 ---
 
 

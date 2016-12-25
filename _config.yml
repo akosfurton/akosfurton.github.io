@@ -2,9 +2,9 @@
 permalink:           pretty
 
 # Setup
-title:               Poole
+title:               Akos Furton
 tagline:             The Jekyll Butler
-url:                 http://getpoole.com
+url:                 www.akosfurton.com
 paginate:            1
 baseurl:             ""
 
@@ -30,3 +30,8 @@ github:
 gems:
   - jekyll-paginate
   - jekyll-gist
+
+pages_list:
+  About: '/about'
+  Archive: '/archive'
+  Feed: '/atom.xml'
