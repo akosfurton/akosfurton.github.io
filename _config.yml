@@ -17,9 +17,9 @@ sass:
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Akos Furton
+  url:               http://akosfurton.com
+  email:             akos.furton@gmail.com
 
 # Custom vars
 version:             2.0.0
@@ -33,5 +33,7 @@ gems:
 
 pages_list:
   About: '/about'
+  My Github: 'https://github.com/akosfurton'
+  Email Me: 'mailto: akos.furton@gmail.com'
   Archive: '/archive'
   Feed: '/atom.xml'
