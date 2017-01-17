@@ -34,6 +34,6 @@ gems:
 pages_list:
   About: '/about'
   My Github: 'https://github.com/akosfurton'
-  Email Me: 'mailto: akos.furton@gmail.com'
+  Email Me: 'mailto:akos.furton@gmail.com'
   Archive: '/archive'
   Feed: '/atom.xml'
