@@ -843,7 +843,7 @@ percent_change[['DAL', 'AAL', 'LUV', 'UAL', 'ALK']].plot()
 
     <matplotlib.axes._subplots.AxesSubplot at 0x1093c3be0>
 
-![image1](/assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_69_1.png){:class="img-responsive"}
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_69_1.png){:class="img-responsive"}
 
 
 ```python
