@@ -5,9 +5,6 @@ comments: True
 permalink: stock-clustering
 ---
 
-![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_69_1.png){:class="img-responsive"}
-
-
 The goal of this analysis is to explore clustering in the S&P 500 index. By identifying stocks that move together, we can predict stock price movements of similar stocks.
 
 To do this, we use the 2015 daily adjusted close prices of all of the firms listed on the S&P 500. The data can be found on and downloaded from websites such as Google Finance or Yahoo Finance.
@@ -861,8 +858,7 @@ percent_change[['UNH', 'CI', 'AET', 'CNC', 'ANTM']].plot()
 
 
 
-![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_70_1.png)
-
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_70_1.png){:class="img-responsive"}
 
 
 ```python
@@ -877,8 +873,7 @@ percent_change[['MAR', 'HOT', 'WYN']].plot()
 
 
 
-![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_71_1.png)
-
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_71_1.png){:class="img-responsive"}
 
 
 ```python
@@ -893,8 +888,7 @@ percent_change[['VLO', 'PSX', 'TSO', 'MPC']].plot()
 
 
 
-![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_72_1.png)
-
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_72_1.png){:class="img-responsive"}
 
 
 ```python
@@ -909,8 +903,7 @@ percent_change[['KSU', 'NSC', 'UNP', 'CSX']].plot()
 
 
 
-![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_73_1.png)
-
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_73_1.png){:class="img-responsive"}
 
 
 ```python
@@ -925,8 +918,7 @@ percent_change[['FOX', 'FOXA', 'DIS', 'CMCSA', 'TWX']].plot()
 
 
 
-![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_74_1.png)
-
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_74_1.png){:class="img-responsive"}
 
 
 ```python
@@ -941,8 +933,7 @@ percent_change[['MO', 'PM', 'RAI']].plot()
 
 
 
-![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_75_1.png)
-
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_75_1.png){:class="img-responsive"}
 
 ## Normalised Prices
 
@@ -963,8 +954,7 @@ pricesScaled[['DAL', 'AAL', 'LUV', 'UAL', 'ALK']].plot()
 
 
 
-![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_77_1.png)
-
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_76_1.png){:class="img-responsive"}
 
 
 ```python
@@ -979,8 +969,7 @@ pricesScaled[['UNH', 'CI', 'AET', 'CNC', 'ANTM']].plot()
 
 
 
-![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_78_1.png)
-
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_77_1.png){:class="img-responsive"}
 
 
 ```python
@@ -995,8 +984,7 @@ pricesScaled[['MAR', 'HOT', 'WYN']].plot()
 
 
 
-![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_79_1.png)
-
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_78_1.png){:class="img-responsive"}
 
 
 ```python
@@ -1011,8 +999,7 @@ pricesScaled[['VLO', 'PSX', 'TSO', 'MPC']].plot()
 
 
 
-![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_80_1.png)
-
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_79_1.png){:class="img-responsive"}
 
 
 ```python
@@ -1027,8 +1014,7 @@ pricesScaled[['KSU', 'NSC', 'UNP', 'CSX']].plot()
 
 
 
-![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_81_1.png)
-
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_80_1.png){:class="img-responsive"}
 
 
 ```python
@@ -1043,8 +1029,7 @@ pricesScaled[['FOX', 'FOXA', 'DIS', 'CMCSA', 'TWX']].plot()
 
 
 
-![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_82_1.png)
-
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_81_1.png){:class="img-responsive"}
 
 
 ```python
@@ -1059,8 +1044,7 @@ pricesScaled[['MO', 'PM', 'RAI']].plot()
 
 
 
-![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_83_1.png)
-
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_82_1.png){:class="img-responsive"}
 
 ## Alternative Clustering Methods
 
