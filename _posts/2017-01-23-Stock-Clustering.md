@@ -5,6 +5,9 @@ comments: True
 permalink: stock-clustering
 ---
 
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_69_1.png){:class="img-responsive"}
+
+
 The goal of this analysis is to explore clustering in the S&P 500 index. By identifying stocks that move together, we can predict stock price movements of similar stocks.
 
 To do this, we use the 2015 daily adjusted close prices of all of the firms listed on the S&P 500. The data can be found on and downloaded from websites such as Google Finance or Yahoo Finance.
