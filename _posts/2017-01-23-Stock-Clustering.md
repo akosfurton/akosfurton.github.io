@@ -5,8 +5,6 @@ comments: True
 permalink: stock-clustering
 ---
 
-## Stock Market Clustering
-
 The goal of this analysis is to explore clustering in the S&P 500 index. By identifying stocks that move together, we can predict stock price movements of similar stocks.
 
 To do this, we use the 2015 daily adjusted close prices of all of the firms listed on the S&P 500. The data can be found on and downloaded from websites such as Google Finance or Yahoo Finance.
@@ -845,11 +843,7 @@ percent_change[['DAL', 'AAL', 'LUV', 'UAL', 'ALK']].plot()
 
     <matplotlib.axes._subplots.AxesSubplot at 0x1093c3be0>
 
-
-
-
-![png](2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_69_1.png)
-
+![image1](/assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_69_1.png){:class="img-responsive"}
 
 
 ```python
@@ -864,7 +858,7 @@ percent_change[['UNH', 'CI', 'AET', 'CNC', 'ANTM']].plot()
 
 
 
-![png](2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_70_1.png)
+![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_70_1.png)
 
 
 
@@ -880,7 +874,7 @@ percent_change[['MAR', 'HOT', 'WYN']].plot()
 
 
 
-![png](2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_71_1.png)
+![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_71_1.png)
 
 
 
@@ -896,7 +890,7 @@ percent_change[['VLO', 'PSX', 'TSO', 'MPC']].plot()
 
 
 
-![png](2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_72_1.png)
+![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_72_1.png)
 
 
 
@@ -912,7 +906,7 @@ percent_change[['KSU', 'NSC', 'UNP', 'CSX']].plot()
 
 
 
-![png](2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_73_1.png)
+![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_73_1.png)
 
 
 
@@ -928,7 +922,7 @@ percent_change[['FOX', 'FOXA', 'DIS', 'CMCSA', 'TWX']].plot()
 
 
 
-![png](2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_74_1.png)
+![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_74_1.png)
 
 
 
@@ -944,7 +938,7 @@ percent_change[['MO', 'PM', 'RAI']].plot()
 
 
 
-![png](2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_75_1.png)
+![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_75_1.png)
 
 
 ## Normalised Prices
@@ -966,7 +960,7 @@ pricesScaled[['DAL', 'AAL', 'LUV', 'UAL', 'ALK']].plot()
 
 
 
-![png](2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_77_1.png)
+![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_77_1.png)
 
 
 
@@ -982,7 +976,7 @@ pricesScaled[['UNH', 'CI', 'AET', 'CNC', 'ANTM']].plot()
 
 
 
-![png](2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_78_1.png)
+![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_78_1.png)
 
 
 
@@ -998,7 +992,7 @@ pricesScaled[['MAR', 'HOT', 'WYN']].plot()
 
 
 
-![png](2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_79_1.png)
+![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_79_1.png)
 
 
 
@@ -1014,7 +1008,7 @@ pricesScaled[['VLO', 'PSX', 'TSO', 'MPC']].plot()
 
 
 
-![png](2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_80_1.png)
+![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_80_1.png)
 
 
 
@@ -1030,7 +1024,7 @@ pricesScaled[['KSU', 'NSC', 'UNP', 'CSX']].plot()
 
 
 
-![png](2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_81_1.png)
+![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_81_1.png)
 
 
 
@@ -1046,7 +1040,7 @@ pricesScaled[['FOX', 'FOXA', 'DIS', 'CMCSA', 'TWX']].plot()
 
 
 
-![png](2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_82_1.png)
+![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_82_1.png)
 
 
 
@@ -1062,7 +1056,7 @@ pricesScaled[['MO', 'PM', 'RAI']].plot()
 
 
 
-![png](2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_83_1.png)
+![png](/ipynb/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_83_1.png)
 
 
 ## Alternative Clustering Methods
