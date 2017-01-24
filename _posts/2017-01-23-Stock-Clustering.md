@@ -7,7 +7,7 @@ permalink: stock-clustering
 
 The goal of this analysis is to explore clustering in the S&P 500 index. By identifying stocks that move together, we can predict stock price movements of similar stocks.
 
-To do this, we use the 2015 daily adjusted close prices of all of the firms listed on the S&P 500. The data can be found on and downloaded from websites such as Google Finance or Yahoo Finance. The exact dataset used in this post can be found [here](https://www.dropbox.com/s/ra5a4w1h82fjq6u/SP_500_close_2015.csv) and [here](https://www.dropbox.com/s/ahof61wjlaz27ee/SP_500_firms.csv)
+To do this, we use the 2015 daily adjusted close prices of all of the firms listed on the S&P 500. The data can be found on and downloaded from websites such as Google Finance or Yahoo Finance. The exact dataset used in this post can be found [here](https://www.dropbox.com/s/ra5a4w1h82fjq6u/SP_500_close_2015.csv) and [here](https://www.dropbox.com/s/ahof61wjlaz27ee/SP_500_firms.csv).
 
 We will be using Jupyter notebooks (an application to run annotated, interactive python code) to explore the data and conduct our analysis.
 
@@ -45,41 +45,9 @@ priceData.head()
       <th>ABBV</th>
       <th>ACN</th>
       <th>ATVI</th>
-      <th>AYI</th>
-      <th>ADBE</th>
-      <th>AAP</th>
-      <th>AES</th>
-      <th>AET</th>
-      <th>...</th>
-      <th>XEL</th>
-      <th>XRX</th>
-      <th>XLNX</th>
-      <th>XL</th>
-      <th>XYL</th>
-      <th>YHOO</th>
-      <th>YUM</th>
-      <th>ZBH</th>
-      <th>ZION</th>
-      <th>ZTS</th>
     </tr>
     <tr>
       <th>Date</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -95,22 +63,6 @@ priceData.head()
       <td>61.986410</td>
       <td>86.129228</td>
       <td>19.765196</td>
-      <td>139.234407</td>
-      <td>72.339996</td>
-      <td>158.132353</td>
-      <td>12.860543</td>
-      <td>87.354435</td>
-      <td>...</td>
-      <td>33.927597</td>
-      <td>13.191375</td>
-      <td>41.513829</td>
-      <td>32.998169</td>
-      <td>37.072501</td>
-      <td>50.169998</td>
-      <td>69.542301</td>
-      <td>110.963875</td>
-      <td>27.853656</td>
-      <td>42.723658</td>
     </tr>
     <tr>
       <th>2015-01-05</th>
@@ -119,22 +71,6 @@ priceData.head()
       <td>60.819874</td>
       <td>84.674997</td>
       <td>19.490271</td>
-      <td>135.889914</td>
-      <td>71.980003</td>
-      <td>156.047994</td>
-      <td>12.494440</td>
-      <td>86.173965</td>
-      <td>...</td>
-      <td>33.542483</td>
-      <td>12.903563</td>
-      <td>40.752108</td>
-      <td>33.199318</td>
-      <td>34.765202</td>
-      <td>49.130001</td>
-      <td>68.129346</td>
-      <td>115.103219</td>
-      <td>26.810004</td>
-      <td>42.467175</td>
     </tr>
     <tr>
       <th>2015-01-06</th>
@@ -143,22 +79,6 @@ priceData.head()
       <td>60.518833</td>
       <td>84.064223</td>
       <td>19.126976</td>
-      <td>134.187800</td>
-      <td>70.529999</td>
-      <td>155.938290</td>
-      <td>12.212822</td>
-      <td>86.301853</td>
-      <td>...</td>
-      <td>33.720953</td>
-      <td>12.730876</td>
-      <td>40.161775</td>
-      <td>33.362155</td>
-      <td>34.560759</td>
-      <td>49.209999</td>
-      <td>67.293113</td>
-      <td>114.127520</td>
-      <td>25.786046</td>
-      <td>42.052863</td>
     </tr>
     <tr>
       <th>2015-01-07</th>
@@ -167,22 +87,6 @@ priceData.head()
       <td>62.964797</td>
       <td>85.828689</td>
       <td>18.714587</td>
-      <td>136.566769</td>
-      <td>71.110001</td>
-      <td>159.289228</td>
-      <td>12.231597</td>
-      <td>88.033197</td>
-      <td>...</td>
-      <td>34.012134</td>
-      <td>12.893969</td>
-      <td>40.180818</td>
-      <td>33.381309</td>
-      <td>34.833350</td>
-      <td>48.590000</td>
-      <td>69.523080</td>
-      <td>116.965922</td>
-      <td>26.032190</td>
-      <td>42.920947</td>
     </tr>
     <tr>
       <th>2015-01-08</th>
@@ -191,22 +95,6 @@ priceData.head()
       <td>63.623323</td>
       <td>87.137495</td>
       <td>18.901144</td>
-      <td>141.344618</td>
-      <td>72.919998</td>
-      <td>160.685446</td>
-      <td>12.419342</td>
-      <td>90.885990</td>
-      <td>...</td>
-      <td>34.406643</td>
-      <td>13.248937</td>
-      <td>41.075840</td>
-      <td>33.927287</td>
-      <td>35.096207</td>
-      <td>50.230000</td>
-      <td>70.734178</td>
-      <td>118.207726</td>
-      <td>26.396482</td>
-      <td>43.581878</td>
     </tr>
   </tbody>
 </table>
@@ -298,7 +186,7 @@ for i in percent_change:
         percent_changeD[i].append(ret)
         
 percent_change2 = pd.DataFrame(data = percent_changeD, 
-						index=priceData.index[1:])
+			index=priceData.index[1:])
 ```
 
 ### Maximum / Minimum Daily Returns
@@ -364,7 +252,7 @@ AnnualReturn = {}
 yearMax = -math.inf
 for i in percent_change2:
     AnnualReturn[i] = (priceData[i][-1]-priceData[i][0])
-    				/priceData[i][0]
+    			/priceData[i][0]
     if AnnualReturn[i] > yearMax:
         yearMax = AnnualReturn[i]
         maxCo = i
@@ -387,7 +275,7 @@ AnnualReturn = {}
 yearMin = math.inf
 for i in percent_change2:
     AnnualReturn[i] = (priceData[i][-1]-priceData[i][0])
-    				/priceData[i][0]
+    			/priceData[i][0]
     if AnnualReturn[i] < yearMin:
         yearMin = AnnualReturn[i]
         minCo = i
@@ -510,7 +398,8 @@ def corr_print(company1, company2):
 corr_print("AAPL", "MMM")   
 ```
 
-    The correlation coefficient between Apple Inc. and 3M Company is 0.5157280000348696.
+    The correlation coefficient between 
+    Apple Inc. and 3M Company is 0.5157280000348696.
 
 
 ### Most and Least Correlated Companies
@@ -617,7 +506,7 @@ Because the correlation matrix is symmetric, we only need to sort one half of th
 correlations = percent_change.corr()
 
 correlations = correlations.where(np.triu(np.ones(correlations.
-			shape)).astype(np.bool))
+		shape)).astype(np.bool))
 correlations = correlations.stack().reset_index()
 correlations.columns = ['Company1', 'Company2', 'Correlation']
 
@@ -775,7 +664,7 @@ def recoverSets(nodePointers, nodeStarting, nodeBottom):
             dict.setdefault(b_key, set())
             for s_key, s_value in nodeStarting.items():
                 if s_value and findbottom(s_key, nodePointers)
-                		 == b_key:
+            == b_key:
                     bottom = findbottom(s_key, nodePointers)
                     current_node = s_key
                     while current_node != bottom:
@@ -1181,7 +1070,7 @@ An example that is very similar to the one we have done is agglomerative cluster
 
 The advantage of this method is that we do not need to determine k before we begin the algorithm, we need only run the algorithm once and decide what k should be after. Alternatively, plotting a dendrogram would give us a visual aid to determine our cut off distance. Furthermore, by changing the way we determine distance between clusters, we could achieve much tighter clusters.
 
-The disadvantage is that there is a need to decide how to calculate "distance" between clusters. The distance between any two nodes is straightforward, the correlation between the two nodes. Now consider that we have two clusters of size $n$ and $m$. In this case how do we define distance? Do we use single linkage, the shortest distance between any two nodes from both clusters? Or complete linkage, the farthest distance?
+The disadvantage is that there is a need to decide how to calculate "distance" between clusters. The distance between any two nodes is straightforward, the correlation between the two nodes. Now consider that we have two clusters of size n and m. In this case how do we define distance? Do we use single linkage, the shortest distance between any two nodes from both clusters? Or complete linkage, the farthest distance?
 
 In our case, we want to cluster stocks such that they are all closely related. It would make sense to use average linkage, the average correlation between all pairwise stocks. This helps to enforce clusters that are all close to each other, with no node in a cluster being too far away from the other. 
 
@@ -1190,23 +1079,20 @@ Another major disadvantage to using hierarchical clustering is the need to updat
 
 ### k-medoids clustering
 
-The basic idea of k medoids clustering in this context is to pick a pre-determined k nodes as "centers" , put them into k different clusters, then assign every other node to the nearest center. In a k-means algorithm, in the next iteration, we would determine a "center". This is done by finding the means of each cluster. However, this would require us to provide co-ordinates, which is something we do not have for this problem. Instead, the k medoids algorithm simply picks the node that is closest to the center to be the new center. For every node, we calculate the sum of its distance to every other member of its cluster. Then for each cluster, pick the node with the smallest sum of distance to be the new medoid, then carry out the next iteration.
+The basic idea of k medoids clustering in this context is to pick a pre-determined k nodes as "centers", put them into k different clusters, then assign every other node to the nearest center. In a k-means algorithm, in the next iteration, we would determine a "center". This is done by finding the means of each cluster. However, this would require us to provide co-ordinates, which is something we do not have for this problem. Instead, the k medoids algorithm simply picks the node that is closest to the center to be the new center. For every node, we calculate the sum of its distance to every other member of its cluster. Then for each cluster, pick the node with the smallest sum of distance to be the new medoid, then carry out the next iteration.
 
 1. Randomly assign k nodes as medoids of k clusters
 2. Assign every other node to cluster of its closest medoid
-3. For each cluster:
-  1. For each node in cluster:
-    1. Calculate sum of distance between node and all other nodes in cluster
-  2. Set node with smallest sum of distance as new medoid
+3. For each cluster: and for each node in cluster
+    
+    a. Calculate sum of distance between node and all other nodes in cluster
+    b. Set node with smallest sum of distance as new medoid
 4. Repeat steps 2-3
 
-Calculating the sum of distance for every node in the graph is an expensive operation that runs in O(n^2) time, where n is the maximum number of nodes in a cluster. Instead of calculating all sum of distance, we can instead use a greedy approach, step 3-1 then becomes:
+Calculating the sum of distance for every node in the graph is an expensive operation that runs in O(n^2) time, where n is the maximum number of nodes in a cluster. Instead of calculating all sum of distance, we can instead use a greedy approach, step 3-a then becomes:
 
-1. For each node in cluster:
-  1. Calculate sum of distance
-  2. If new sum of distance < old sum of distance:
-    1. Set node as new medoid
-    2. break
+1. For each node in cluster, calculate sum of distance
+2. If new sum of distance < old sum of distance, then set node as new medoid
       
 The main advantage of this method over the others is its ability to re-allocate nodes into different clusters. For the given algorithm and hierarchical clustering, once a node is in a cluster, it will never be re-allocated. With k medoids however, the algorithm will constantly re-assign nodes into the most appropriate cluster.
 
