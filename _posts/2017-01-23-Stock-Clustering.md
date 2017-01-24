@@ -1083,9 +1083,10 @@ The basic idea of k medoids clustering in this context is to pick a pre-determin
 
 1. Randomly assign k nodes as medoids of k clusters
 2. Assign every other node to cluster of its closest medoid
-3. For each cluster: and for each node in cluster
+3. For each cluster and for each node in cluster
     
     a. Calculate sum of distance between node and all other nodes in cluster
+    
     b. Set node with smallest sum of distance as new medoid
 4. Repeat steps 2-3
 
