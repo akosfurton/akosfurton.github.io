@@ -7,7 +7,7 @@ permalink: stock-clustering
 
 The goal of this analysis is to explore clustering in the S&P 500 index. By identifying stocks that move together, we can predict stock price movements of similar stocks.
 
-To do this, we use the 2015 daily adjusted close prices of all of the firms listed on the S&P 500. The data can be found on and downloaded from websites such as Google Finance or Yahoo Finance.
+To do this, we use the 2015 daily adjusted close prices of all of the firms listed on the S&P 500. The data can be found on and downloaded from websites such as Google Finance or Yahoo Finance. The exact dataset used in this post can be found [here](https://www.dropbox.com/s/ra5a4w1h82fjq6u/SP_500_close_2015.csv) and [here](https://www.dropbox.com/s/ahof61wjlaz27ee/SP_500_firms.csv)
 
 We will be using Jupyter notebooks (an application to run annotated, interactive python code) to explore the data and conduct our analysis.
 
@@ -24,7 +24,7 @@ import pandas as pd
 %matplotlib inline
 ```
 
-First, we import the csv data file into a Pandas Dataframe. The first thing we must do when faced with a new dataset is to examine what is inside. In this case, the columns are each company in the S&P 500 and each row presents the company's closing price for that day.
+First, we import the csv data file into a Pandas DataFrame. The first thing we must do when faced with a new dataset is to examine what is inside. In this case, the columns are each company in the S&P 500 and each row presents the company's closing price for that day.
 
 
 ```python
@@ -288,7 +288,8 @@ percent_change = priceData.pct_change()
 percent_change = percent_change.drop(percent_change.index[0])
 percent_change.head()
 
-#Or equivalently without using Pandas' built-in percent change function.
+#Or equivalently without using Pandas' built-in 
+#percent change function.
 percent_changeD = {}
 for i in percent_change:
     percent_changeD[i] = []
@@ -296,7 +297,8 @@ for i in percent_change:
         ret = (priceData[i][j]-priceData[i][j-1])/priceData[i][j-1]
         percent_changeD[i].append(ret)
         
-percent_change2 = pd.DataFrame(data = percent_changeD,index=priceData.index[1:])
+percent_change2 = pd.DataFrame(data = percent_changeD, 
+						index=priceData.index[1:])
 ```
 
 ### Maximum / Minimum Daily Returns
@@ -348,7 +350,7 @@ print (fullname(worstCo), worstDate, currMin)
 
 Quanta Services Inc. (PWR) experienced the lowest daily return of any S&P 500 stock during 2015 of -28.50% on October 16, 2015. PWR dropped from 26.21 to 18.74 over the course of the day. 
 
-A more in-depth look at the stock's trading data reveals that its volatility in terms of shares sold jumbed from about 4 million to 24 million daily transactions. The company warned that its 3rd quarter results would be weaker than expected and results might impact the fourth quarter. 
+A more in-depth look at the stock's trading data reveals that its volatility in terms of shares sold jumped from about 4 million to 24 million daily transactions. The company warned that its 3rd quarter results would be weaker than expected and results might impact the fourth quarter. 
 
 Over the course of the year, Quanta experienced poor performance, with its share price decreasing from 28.35 to 20.25. The weak results occurred due to falling oil and gas prices because of the emergence of fracking. Consequently, the energy industry's services sector in which Quanta operates also experienced significant hardship. 
 
@@ -361,7 +363,8 @@ We also seek to know which companies performed the best over the course of the e
 AnnualReturn = {}
 yearMax = -math.inf
 for i in percent_change2:
-    AnnualReturn[i] = (priceData[i][-1]-priceData[i][0])/priceData[i][0]
+    AnnualReturn[i] = (priceData[i][-1]-priceData[i][0])
+    				/priceData[i][0]
     if AnnualReturn[i] > yearMax:
         yearMax = AnnualReturn[i]
         maxCo = i
@@ -374,7 +377,7 @@ print (yearMax, maxCo, fullname(maxCo))
 
 Over the course of 2015, Netflix achieved the highest annual returns of any stock on the S&P 500. It achieved a phenomenal return of 129.5%, over doubling its initial price. The stock started the year at \$48.80 per share and finished the year at \$114.38.
 
-Netflix (NFLX) had an excellent 2015 because its content library increaeased significantly. Furthermore, the company converted its enhanced library into new customers. Netflix's growth has been accelerated by the decline of traditional cable based television entertainment. 
+Netflix (NFLX) had an excellent 2015 because its content library increased significantly. Furthermore, the company converted its enhanced library into new customers. Netflix's growth has been accelerated by the decline of traditional cable based television entertainment. 
 
 ### Minimum Annual Returns
 
@@ -383,7 +386,8 @@ Netflix (NFLX) had an excellent 2015 because its content library increaeased sig
 AnnualReturn = {}
 yearMin = math.inf
 for i in percent_change2:
-    AnnualReturn[i] = (priceData[i][-1]-priceData[i][0])/priceData[i][0]
+    AnnualReturn[i] = (priceData[i][-1]-priceData[i][0])
+    				/priceData[i][0]
     if AnnualReturn[i] < yearMin:
         yearMin = AnnualReturn[i]
         minCo = i
@@ -500,7 +504,8 @@ for company1 in percent_change:
                 
 def corr_print(company1, company2):
     print ("The correlation coefficient between {} and {} is {}."
-           .format(fullname(company1), fullname(company2), correlations[company1][company2]))
+           .format(fullname(company1), fullname(company2), 
+           	correlations[company1][company2]))
 
 corr_print("AAPL", "MMM")   
 ```
@@ -524,8 +529,10 @@ def top_bottomcorr(ts):
         corr_co = correlations[ts][ss]
         corr_tb.append((corr_co, ss))
     corr_tb.sort()    
-    print ("Most Correlated:", fullname(corr_tb[-1][1]), "(", corr_tb[-1][0],")")
-    print ("Least Correlated:", fullname(corr_tb[0][1]), "(", corr_tb[0][0],")")
+    print ("Most Correlated:", fullname(corr_tb[-1][1]), 
+    		"(", corr_tb[-1][0],")")
+    print ("Least Correlated:", fullname(corr_tb[0][1]), 
+    		"(", corr_tb[0][0],")")
 ```
 
 ### Amazon
@@ -575,10 +582,10 @@ top_bottomcorr("FB")
 ```
 
     Most Correlated: Fiserv Inc ( 0.61966671131 )
-    Least Correlated: Newmont Mining Corp. (Hldg. Co.) ( -0.00283227001625 )
+    Least Correlated: Newmont Mining Corp. ( -0.00283227001625 )
 
 
-Facebook (FB) is found to be most strongly correlated with Fiserv Inc (FISV) in terms of stock return, with the correlation coefficient of 0.620. Both firms operate in technology although Fiserv focuses primarily on the financial sector. Fiserv has built a banking platform on Facebook for companies to build applications on Facebook. THe link might explain their correlated stock returns.
+Facebook (FB) is found to be most strongly correlated with Fiserv Inc (FISV) in terms of stock return, with the correlation coefficient of 0.620. Both firms operate in technology although Fiserv focuses primarily on the financial sector. Fiserv has built a banking platform on Facebook for companies to build applications on Facebook. The link might explain their correlated stock returns.
 
 As we have previously encountered, the stock least correlated with Facebook is an energy firm. Mining giant Newmont Mining Corp has essentially no correlation with Facebook. As discussed previously, technology and energy appear to be wholly uncorrelated fields.
 
@@ -609,7 +616,8 @@ Because the correlation matrix is symmetric, we only need to sort one half of th
 ```python
 correlations = percent_change.corr()
 
-correlations = correlations.where(np.triu(np.ones(correlations.shape)).astype(np.bool))
+correlations = correlations.where(np.triu(np.ones(correlations.
+			shape)).astype(np.bool))
 correlations = correlations.stack().reset_index()
 correlations.columns = ['Company1', 'Company2', 'Correlation']
 
@@ -741,7 +749,8 @@ def findbottom(node, nodePointers):
     return destination
 
 def mergeSets(sortedWeights, k):
-    sortedWeights = [value for value in sortedWeights if value[0] != value[1]]
+    sortedWeights = [value for value in sortedWeights 
+    				if value[0] != value[1]]
     graph = init_graph(sortedWeights)
     nodePointers = init_nodePointers(graph)
     nodeStarting = init_nodeStarting(graph)
@@ -765,7 +774,8 @@ def recoverSets(nodePointers, nodeStarting, nodeBottom):
         if b_value:
             dict.setdefault(b_key, set())
             for s_key, s_value in nodeStarting.items():
-                if s_value and findbottom(s_key, nodePointers) == b_key:
+                if s_value and findbottom(s_key, nodePointers)
+                		 == b_key:
                     bottom = findbottom(s_key, nodePointers)
                     current_node = s_key
                     while current_node != bottom:
@@ -777,15 +787,72 @@ def recoverSets(nodePointers, nodeStarting, nodeBottom):
 
 We can now run our algorithm k times. K represents the number of edges we will add. These edges will transition the node pointers from one node to another. We return the clusters the algorithm finds. 
 
-When we pass the algorithm k = 10,000, that is the number of edges we allow it to modify, the stock market is clustered into 1 giant clump. This makes sense, since there are at most $\frac{n(n-1)}{2} < 100000$ edges, so the entire graph is combined into one cluster.
+When we pass the algorithm k = 10,000, that is the number of edges we allow it to modify, the stock market is clustered into 1 giant clump. This makes sense, since there are at most ((n)*(n-1)) / 2 < 100000 edges, so the entire graph is combined into one cluster.
 
 
 ```python
-nodePointers, nodeStarting, nodeBottom = mergeSets(sortedWeights, 100000)
+nodePointers, nodeStarting, nodeBottom 
+				= mergeSets(sortedWeights, 100000)
 print(recoverSets(nodePointers, nodeStarting, nodeBottom))
 ```
 
-    [{'HP', 'APH', 'GIS', 'SCHW', 'AAPL', 'KIM', 'SRCL', 'TSS', 'MU', 'MLM', 'CNC', 'GD', 'APD', 'XL', 'JWN', 'MAS', 'ROST', 'BA', 'HAL', 'WHR', 'AES', 'A', 'WAT', 'LRCX', 'SJM', 'R', 'RRC', 'ROP', 'AKAM', 'WM', 'VTR', 'CTSH', 'MDT', 'PGR', 'NEM', 'DO', 'BAX', 'CPB', 'JPM', 'DISCA', 'AMZN', 'DOW', 'PKI', 'IRM', 'FLIR', 'PM', 'HBAN', 'HPQ', 'AET', 'BMY', 'NFX', 'MNST', 'ADP', 'OMC', 'EMN', 'GPC', 'BXP', 'FL', 'VNO', 'QRVO', 'ABT', 'CERN', 'TXT', 'MET', 'MAC', 'ES', 'UAL', 'EA', 'BK', 'BDX', 'AN', 'PH', 'CBG', 'SE', 'GOOG', 'STX', 'MCO', 'TSO', 'NDAQ', 'JCI', 'FBHS', 'HST', 'LNT', 'SYK', 'TDG', 'NWS', 'SRE', 'AMAT', 'JBHT', 'ENDP', 'PPG', 'CHRW', 'PSA', 'BIIB', 'K', 'KEY', 'BF-B', 'LLL', 'IP', 'NFLX', 'CRM', 'LEN', 'COG', 'NBL', 'PNC', 'L', 'TROW', 'AZO', 'IVZ', 'PRU', 'ORCL', 'DPS', 'WMT', 'DFS', 'AWK', 'ORLY', 'CMI', 'CELG', 'SLB', 'NOV', 'USB', 'MON', 'PLD', 'TAP', 'BBBY', 'NAVI', 'GOOGL', 'MMM', 'AAP', 'FMC', 'KR', 'EQIX', 'FOXA', 'FOX', 'FTR', 'STZ', 'URBN', 'FISV', 'ACN', 'IPG', 'DHR', 'CME', 'HBI', 'AMT', 'UA', 'ROK', 'BSX', 'ULTA', 'T', 'WY', 'UPS', 'ECL', 'AEP', 'EOG', 'VMC', 'ZBH', 'DLTR', 'D', 'VRSK', 'LLTC', 'INTU', 'SYY', 'XLNX', 'CCL', 'AVGO', 'TJX', 'HCA', 'NLSN', 'KLAC', 'ANTM', 'KSS', 'BRK-B', 'MO', 'WMB', 'ADM', 'CMA', 'DD', 'RHT', 'BHI', 'HRS', 'TEL', 'COST', 'MYL', 'FDX', 'QCOM', 'DE', 'CMCSA', 'ABC', 'NVDA', 'PCAR', 'DVA', 'FB', 'EW', 'CF', 'WBA', 'MTB', 'CHD', 'APA', 'FIS', 'HSY', 'MSI', 'DNB', 'RHI', 'WFM', 'TRV', 'BCR', 'O', 'AMP', 'EL', 'KORS', 'LM', 'VRSN', 'FLR', 'PFG', 'GE', 'CA', 'AMG', 'CL', 'CNP', 'ALB', 'CMS', 'MCHP', 'XEL', 'XYL', 'AVY', 'SNA', 'PDCO', 'RSG', 'F', 'CAH', 'UHS', 'ETFC', 'EMR', 'ALK', 'BEN', 'SYMC', 'APC', 'COF', 'CBS', 'IR', 'TYC', 'RIG', 'M', 'TXN', 'AVB', 'VAR', 'NTAP', 'ILMN', 'ESS', 'HAS', 'COP', 'OXY', 'PBI', 'JNJ', 'TMO', 'CAT', 'CMG', 'STJ', 'BLL', 'NI', 'TRIP', 'LEG', 'MDLZ', 'PCLN', 'HD', 'AEE', 'CAG', 'FTI', 'AFL', 'AIV', 'RTN', 'ALXN', 'AAL', 'ZION', 'MPC', 'LOW', 'PCG', 'GM', 'ATVI', 'BLK', 'HOLX', 'HSIC', 'TSN', 'VFC', 'EMC', 'ED', 'WYNN', 'CTAS', 'LH', 'SBUX', 'STI', 'TIF', 'ETR', 'PX', 'HAR', 'CVX', 'DVN', 'MCD', 'EBAY', 'PNR', 'LUK', 'PVH', 'AIG', 'AA', 'XEC', 'GPN', 'MNK', 'TSCO', 'AME', 'AIZ', 'MHK', 'UTX', 'EXC', 'DUK', 'ICE', 'GILD', 'ZTS', 'KO', 'PEP', 'STT', 'MAT', 'RCL', 'SWK', 'NRG', 'AJG', 'ADI', 'SLG', 'RL', 'WEC', 'DGX', 'SNI', 'AGN', 'DLR', 'KSU', 'GWW', 'FITB', 'SYF', 'CINF', 'SWN', 'XRAY', 'DOV', 'NSC', 'MOS', 'TGT', 'SO', 'HCP', 'EQR', 'GPS', 'AYI', 'VRTX', 'EFX', 'MKC', 'ADSK', 'ALLE', 'DG', 'GGP', 'PHM', 'ITW', 'FAST', 'MRK', 'RAI', 'KMX', 'PXD', 'NOC', 'IFF', 'COL', 'CLX', 'URI', 'MUR', 'HES', 'PFE', 'SPG', 'LLY', 'DTE', 'DIS', 'C', 'CFG', 'CSX', 'PG', 'SEE', 'PSX', 'XRX', 'SCG', 'LYB', 'IBM', 'SPGI', 'NWSA', 'WFC', 'HCN', 'FFIV', 'CXO', 'MAR', 'KMB', 'UNM', 'PNW', 'LKQ', 'HRB', 'GS', 'TGNA', 'TDC', 'NKE', 'MS', 'VLO', 'ABBV', 'HRL', 'MMC', 'LUV', 'FSLR', 'NWL', 'TWX', 'VZ', 'WDC', 'NTRS', 'XOM', 'YHOO', 'LVLT', 'FRT', 'CTL', 'DAL', 'UNH', 'EIX', 'GT', 'EXPE', 'EXR', 'PAYX', 'GLW', 'EXPD', 'CCI', 'UNP', 'CTXS', 'INTC', 'SIG', 'PEG', 'SPLS', 'FE', 'CI', 'BBT', 'MCK', 'CVS', 'REGN', 'V', 'COH', 'KMI', 'GRMN', 'NUE', 'PWR', 'ESRX', 'JNPR', 'ISRG', 'HIG', 'PRGO', 'RF', 'FCX', 'VIAB', 'SHW', 'LB', 'ADBE', 'WU', 'ALL', 'BAC', 'MRO', 'AON', 'CB', 'ETN', 'HOT', 'BBY', 'MSFT', 'AMGN', 'DHI', 'FLS', 'CSCO', 'YUM', 'BWA', 'PPL', 'HON', 'EQT', 'HOG', 'HUM', 'PBCT', 'OKE', 'MJN', 'LNC', 'WYN', 'UDR', 'DISCK', 'ADS', 'JEC', 'DRI', 'TMK', 'MA', 'AXP', 'DLPH', 'LMT', 'SWKS', 'CHK', 'OI'}]
+[{'HP', 'APH', 'GIS', 'SCHW', 'AAPL', 'KIM', 'SRCL', 'TSS', 'MU', 
+'MLM', 'CNC', 'GD', 'APD', 'XL', 'JWN', 'MAS', 'ROST', 'BA', 
+'HAL', 'WHR', 'AES', 'A', 'WAT', 'LRCX', 'SJM', 'R', 'RRC', 
+'ROP', 'AKAM', 'WM', 'VTR', 'CTSH', 'MDT', 'PGR', 'NEM', 
+'DO', 'BAX', 'CPB', 'JPM', 'DISCA', 'AMZN', 'DOW', 'PKI', 
+'IRM', 'FLIR', 'PM', 'HBAN', 'HPQ', 'AET', 'BMY', 'NFX', 
+'MNST', 'ADP', 'OMC', 'EMN', 'GPC', 'BXP', 'FL', 'VNO', 
+'QRVO', 'ABT', 'CERN', 'TXT', 'MET', 'MAC', 'ES', 'UAL', 
+'EA', 'BK', 'BDX', 'AN', 'PH', 'CBG', 'SE', 'GOOG', 'STX', 
+'MCO', 'TSO', 'NDAQ', 'JCI', 'FBHS', 'HST', 'LNT', 'SYK', 
+'TDG', 'NWS', 'SRE', 'AMAT', 'JBHT', 'ENDP', 'PPG', 'CHRW', 
+'PSA', 'BIIB', 'K', 'KEY', 'BF-B', 'LLL', 'IP', 'NFLX', 'CRM', 'LEN', '
+COG', 'NBL', 'PNC', 'L', 'TROW', 'AZO', 'IVZ', 'PRU', 'ORCL', 
+'DPS', 'WMT', 'DFS', 'AWK', 'ORLY', 'CMI', 'CELG', 'SLB', 
+'NOV', 'USB', 'MON', 'PLD', 'TAP', 'BBBY', 'NAVI', 'GOOGL',
+'MMM', 'AAP', 'FMC', 'KR', 'EQIX', 'FOXA', 'FOX', 'FTR', 'STZ', 
+'URBN', 'FISV', 'ACN', 'IPG', 'DHR', 'CME', 'HBI', 'AMT', 'UA', 
+'ROK', 'BSX', 'ULTA', 'T', 'WY', 'UPS', 'ECL', 'AEP', 'EOG', 
+'VMC', 'ZBH', 'DLTR', 'D', 'VRSK', 'LLTC', 'INTU', 'SYY', 'XLNX', 
+'CCL', 'AVGO', 'TJX', 'HCA', 'NLSN', 'KLAC', 'ANTM', 'KSS', '
+BRK-B', 'MO', 'WMB', 'ADM', 'CMA', 'DD', 'RHT', 'BHI', 'HRS', 
+'TEL', 'COST', 'MYL', 'FDX', 'QCOM', 'DE', 'CMCSA', 'ABC',
+'NVDA', 'PCAR', 'DVA', 'FB', 'EW', 'CF', 'WBA', 'MTB', 'CHD', 
+'APA', 'FIS', 'HSY', 'MSI', 'DNB', 'RHI', 'WFM', 'TRV', 'BCR', '
+O', 'AMP', 'EL', 'KORS', 'LM', 'VRSN', 'FLR', 'PFG', 'GE', 'CA', '
+AMG', 'CL', 'CNP', 'ALB', 'CMS', 'MCHP', 'XEL', 'XYL', 'AVY', 
+'SNA', 'PDCO', 'RSG', 'F', 'CAH', 'UHS', 'ETFC', 'EMR', 'ALK', 
+'BEN', 'SYMC', 'APC', 'COF', 'CBS', 'IR', 'TYC', 'RIG', 'M', '
+TXN', 'AVB', 'VAR', 'NTAP', 'ILMN', 'ESS', 'HAS', 'COP', 'OXY',
+'PBI', 'JNJ', 'TMO', 'CAT', 'CMG', 'STJ', 'BLL', 'NI', 'TRIP', 
+'LEG', 'MDLZ', 'PCLN', 'HD', 'AEE', 'CAG', 'FTI', 'AFL', 'AIV', 
+'RTN', 'ALXN', 'AAL', 'ZION', 'MPC', 'LOW', 'PCG', 'GM', 
+'ATVI', 'BLK', 'HOLX', 'HSIC', 'TSN', 'VFC', 'EMC', 'ED', 
+'WYNN', 'CTAS', 'LH', 'SBUX', 'STI', 'TIF', 'ETR', 'PX', 'HAR', 
+'CVX', 'DVN', 'MCD', 'EBAY', 'PNR', 'LUK', 'PVH', 'AIG', 'AA', 
+'XEC', 'GPN', 'MNK', 'TSCO', 'AME', 'AIZ', 'MHK', 'UTX', 'EXC', 
+'DUK', 'ICE', 'GILD', 'ZTS', 'KO', 'PEP', 'STT', 'MAT', 'RCL', 
+'SWK', 'NRG', 'AJG', 'ADI', 'SLG', 'RL', 'WEC', 'DGX', 'SNI', 
+'AGN', 'DLR', 'KSU', 'GWW', 'FITB', 'SYF', 'CINF', 'SWN', 
+'XRAY', 'DOV', 'NSC', 'MOS', 'TGT', 'SO', 'HCP', 'EQR', 'GPS',
+'AYI', 'VRTX', 'EFX', 'MKC', 'ADSK', 'ALLE', 'DG', 'GGP', 
+'PHM', 'ITW', 'FAST', 'MRK', 'RAI', 'KMX', 'PXD', 'NOC', 'IFF', 
+'COL', 'CLX', 'URI', 'MUR', 'HES', 'PFE', 'SPG', 'LLY', 'DTE', 
+'DIS', 'C', 'CFG', 'CSX', 'PG', 'SEE', 'PSX', 'XRX', 'SCG', 'LYB', 
+'IBM', 'SPGI', 'NWSA', 'WFC', 'HCN', 'FFIV', 'CXO', 'MAR',
+'KMB', 'UNM', 'PNW', 'LKQ', 'HRB', 'GS', 'TGNA', 'TDC', 'NKE', 
+'MS', 'VLO', 'ABBV', 'HRL', 'MMC', 'LUV', 'FSLR', 'NWL', 'TWX',
+'VZ', 'WDC', 'NTRS', 'XOM', 'YHOO', 'LVLT', 'FRT', 'CTL', 'DAL',
+'UNH', 'EIX', 'GT', 'EXPE', 'EXR', 'PAYX', 'GLW', 'EXPD', 'CCI',
+'UNP', 'CTXS', 'INTC', 'SIG', 'PEG', 'SPLS', 'FE', 'CI', 'BBT', 
+'MCK', 'CVS', 'REGN', 'V', 'COH', 'KMI', 'GRMN', 'NUE', 'PWR',
+'ESRX', 'JNPR', 'ISRG', 'HIG', 'PRGO', 'RF', 'FCX', 'VIAB', 
+'SHW', 'LB', 'ADBE', 'WU', 'ALL', 'BAC', 'MRO', 'AON', 'CB', 
+'ETN', 'HOT', 'BBY', 'MSFT', 'AMGN', 'DHI', 'FLS', 'CSCO', 
+'YUM', 'BWA', 'PPL', 'HON', 'EQT', 'HOG', 'HUM', 'PBCT', 'OKE',
+'MJN', 'LNC', 'WYN', 'UDR', 'DISCK', 'ADS', 'JEC', 'DRI', 
+'TMK', 'MA', 'AXP', 'DLPH', 'LMT', 'SWKS', 'CHK', 'OI'}]
 
 
 In contrast, if we set k = 0, then each stock would be clustered in its own set, which is not useful information either. Therefore, we have to find a suitable value for k such that the stocks will be in small, useful clusters. We settle on k = 2000, which gives us a balance between clusters with only one or two stocks and a single giant cluster of the entire S&P 500 index. 
@@ -794,38 +861,99 @@ What we notice is that many firms reside on their own, barely correlated with an
 
 
 ```python
-nodePointers, nodeStarting, nodeBottom = mergeSets(sortedWeights, 2000)
+nodePointers, nodeStarting, nodeBottom 
+			= mergeSets(sortedWeights, 2000)
 cluster_2000 = recoverSets(nodePointers, nodeStarting, nodeBottom)
 print(cluster_2000)
-print("For k = 2000, " + str(len(cluster_2000)) + " clusters are generated." + '\n')
+print("For k = 2000, " + str(len(cluster_2000)) + 
+			" clusters are generated." + '\n')
 ```
 
-    [{'GOOGL', 'GOOG'}, {'PFE'}, {'AAP'}, {'NTAP'}, {'ILMN'}, {'FMC'}, {'HAS'}, {'AAPL'}, {'COST'}, {'SRCL'}, {'MLM', 'VMC'}, {'MU'}, {'ESRX'}, {'FTR'}, {'STZ'}, {'JWN'}, {'MAS'}, {'TJX', 'ROST'}, {'LLY'}, {'PBI'}, {'URBN'}, {'XRX'}, {'CMG'}, {'WHR'}, {'WM', 'RSG'}, {'AES'}, {'STJ'}, {'ORLY', 'AZO'}, {'TRIP'}, {'LEG'}, {'HBI'}, {'NWSA', 'NWS'}, {'MDLZ'}, {'SJM'}, {'PCLN'}, {'R'}, {'UA'}, {'EXPE'}, {'FFIV'}, {'AKAM'}, {'BSX'}, {'HSY'}, {'KR'}, {'NEM'}, {'AYI'}, {'BAX'}, {'BIIB'}, {'ALXN'}, {'AN'}, {'HOT', 'MAR', 'WYN'}, {'TIF'}, {'ULTA'}, {'WY'}, {'ATVI'}, {'HOLX'}, {'TSN'}, {'LKQ'}, {'SNI', 'DISCA', 'DISCK'}, {'HRB'}, {'IRM'}, {'VFC'}, {'EMC'}, {'TGNA'}, {'TDC'}, {'NKE'}, {'WYNN'}, {'ANTM', 'AET', 'CNC', 'UNH', 'CI'}, {'EW'}, {'MNST'}, {'DGX', 'LH'}, {'VRSK'}, {'ABBV'}, {'HRL'}, {'SYY'}, {'ADSK'}, {'DRI'}, {'RCL', 'CCL'}, {'AVGO', 'SWKS'}, {'FL'}, {'FSLR'}, {'NWL'}, {'UHS', 'HCA'}, {'HAR'}, {'MCD'}, {'QRVO'}, {'NLSN'}, {'KLAC'}, {'KSS'}, {'MO', 'RAI', 'PM'}, {'WMB'}, {'CERN'}, {'ADM'}, {'DD'}, {'RHT'}, {'HRS'}, {'APD'}, {'YHOO'}, {'LVLT'}, {'CTL'}, {'AA'}, {'MYL'}, {'GPN'}, {'AGN'}, {'MNK'}, {'EA'}, {'QCOM'}, {'DE'}, {'DIS', 'TWX', 'FOX', 'FOXA', 'CMCSA'}, {'GT'}, {'EBAY'}, {'ABC'}, {'NVDA'}, {'AIZ'}, {'DVA'}, {'CBG'}, {'MHK'}, {'FB'}, {'CF'}, {'WBA'}, {'GLW'}, {'STX', 'WDC'}, {'EIX', 'PCG', 'CNP', 'AVB', 'DLR', 'SPG', 'EXR', 'PNW', 'ESS', 'DTE', 'KIM', 'AEP', 'CMS', 'PPL', 'ED', 'EXC', 'D', 'CCI', 'XEL', 'PEG', 'DUK', 'FE', 'SO', 'HCP', 'LNT', 'EQR', 'ETR', 'SCG', 'BXP', 'UDR', 'VNO', 'NI', 'SRE', 'AWK', 'GGP', 'AMT', 'O', 'AEE', 'SLG', 'HCN', 'AIV', 'PSA', 'VTR', 'WEC', 'PLD', 'FRT', 'ES'}, {'JNPR'}, {'CTXS'}, {'SIG'}, {'TSO', 'VLO', 'MPC', 'PSX'}, {'ZBH'}, {'SPLS'}, {'GILD'}, {'FBHS'}, {'HST'}, {'HPQ'}, {'MSI'}, {'TDG'}, {'MCK'}, {'CVS'}, {'MAT'}, {'FIS'}, {'RHI'}, {'AXP'}, {'LRCX', 'AMAT'}, {'NRG'}, {'JBHT'}, {'COH'}, {'GM', 'F'}, {'GRMN'}, {'NUE'}, {'ENDP'}, {'EL'}, {'ZTS'}, {'RL'}, {'VRSN'}, {'ISRG'}, {'CHRW', 'EXPD'}, {'GE'}, {'PRGO'}, {'TXN', 'MMM', 'HP', 'APH', 'GIS', 'VAR', 'HES', 'SCHW', 'COP', 'C', 'TSS', 'CFG', 'GD', 'PG', 'XL', 'OXY', 'JNJ', 'BA', 'TMO', 'FISV', 'HAL', 'ACN', 'IPG', 'DHR', 'CAT', 'CME', 'A', 'LYB', 'WAT', 'IBM', 'SPGI', 'HD', 'RRC', 'WFC', 'ROP', 'FTI', 'ROK', 'AFL', 'MDT', 'CTSH', 'CXO', 'RTN', 'PGR', 'DO', 'ZION', 'CPB', 'LOW', 'KMB', 'T', 'UPS', 'BLK', 'JPM', 'HSIC', 'UNM', 'DOW', 'PKI', 'ECL', 'EOG', 'GS', 'HBAN', 'CTAS', 'NFX', 'MS', 'ADP', 'SBUX', 'STI', 'OMC', 'LLTC', 'EMN', 'INTU', 'XLNX', 'MMC', 'GPC', 'PX', 'CVX', 'DVN', 'VZ', 'BRK-B', 'ABT', 'PNR', 'TXT', 'CMA', 'BHI', 'MET', 'TEL', 'NTRS', 'XOM', 'AIG', 'FDX', 'XEC', 'BK', 'BDX', 'PCAR', 'AME', 'TSCO', 'PH', 'UTX', 'PAYX', 'MTB', 'SE', 'CHD', 'INTC', 'MCO', 'APA', 'NDAQ', 'ICE', 'JCI', 'SYK', 'KO', 'BBT', 'PEP', 'REGN', 'V', 'STT', 'DNB', 'SWK', 'BCR', 'AJG', 'AMP', 'KMI', 'ADI', 'PPG', 'LM', 'FLR', 'PFG', 'HIG', 'K', 'RF', 'CA', 'KEY', 'SHW', 'BAC', 'MRO', 'AON', 'CB', 'ETN', 'CL', 'AMG', 'LLL', 'AMGN', 'FLS', 'BWA', 'MCHP', 'COG', 'FITB', 'HON', 'CINF', 'NBL', 'SWN', 'EQT', 'PNC', 'AVY', 'DOV', 'L', 'XYL', 'PBCT', 'OKE', 'TROW', 'SNA', 'CAH', 'LNC', 'IVZ', 'PRU', 'MKC', 'DPS', 'JEC', 'ETFC', 'EMR', 'DFS', 'ITW', 'CMI', 'CELG', 'MA', 'SLB', 'TMK', 'NOV', 'BEN', 'MRK', 'DLPH', 'PXD', 'LMT', 'NOC', 'APC', 'USB', 'IFF', 'COL', 'COF', 'CLX', 'MUR', 'TYC', 'TRV', 'RIG'}, {'FCX'}, {'VIAB'}, {'LB'}, {'WU'}, {'ALL'}, {'CBS'}, {'LUK'}, {'BF-B'}, {'YUM'}, {'BBY'}, {'ADBE'}, {'NSC', 'UNP', 'CSX', 'KSU'}, {'MON'}, {'MSFT'}, {'DHI', 'LEN', 'PHM'}, {'CSCO'}, {'ALB'}, {'IP'}, {'NFLX'}, {'CRM'}, {'SYF'}, {'EQIX'}, {'AMZN'}, {'PVH'}, {'HOG'}, {'HUM'}, {'MAC'}, {'XRAY'}, {'FLIR'}, {'MJN'}, {'PDCO'}, {'MOS'}, {'TGT'}, {'IR'}, {'GPS'}, {'VRTX'}, {'EFX'}, {'BLL'}, {'ORCL'}, {'KORS'}, {'ADS'}, {'ALLE'}, {'WMT'}, {'DG'}, {'UAL', 'DAL', 'AAL', 'LUV', 'ALK'}, {'FAST', 'GWW'}, {'DLTR'}, {'CAG'}, {'KMX'}, {'SEE'}, {'SYMC'}, {'BMY'}, {'WFM'}, {'PWR'}, {'URI'}, {'M'}, {'CHK'}, {'TAP'}, {'BBBY'}, {'NAVI'}, {'OI'}]
+[{'GOOGL', 'GOOG'}, {'PFE'}, {'AAP'}, {'NTAP'}, {'ILMN'}, {'FMC'}, 
+{'HAS'}, {'AAPL'}, {'COST'}, {'SRCL'}, {'MLM', 'VMC'}, {'MU'}, 
+{'ESRX'}, {'FTR'}, {'STZ'}, {'JWN'}, {'MAS'}, {'TJX', 'ROST'}, {'LLY'}, 
+{'PBI'}, {'URBN'}, {'XRX'}, {'CMG'}, {'WHR'}, {'WM', 'RSG'}, {'AES'},
+{'STJ'}, {'ORLY', 'AZO'}, {'TRIP'}, {'LEG'}, {'HBI'}, {'NWSA', 'NWS'}, 
+{'MDLZ'}, {'SJM'}, {'PCLN'}, {'R'}, {'UA'}, {'EXPE'}, {'FFIV'}, 
+{'AKAM'}, {'BSX'}, {'HSY'}, {'KR'}, {'NEM'}, {'AYI'}, {'BAX'}, {'BIIB'}, 
+{'ALXN'}, {'AN'}, {'HOT', 'MAR', 'WYN'}, {'TIF'}, {'ULTA'}, {'WY'}, 
+{'ATVI'}, {'HOLX'}, {'TSN'}, {'LKQ'}, {'SNI', 'DISCA', 'DISCK'}, 
+{'HRB'}, {'IRM'}, {'VFC'}, {'EMC'}, {'TGNA'}, {'TDC'}, {'NKE'}, 
+{'WYNN'}, {'ANTM', 'AET', 'CNC', 'UNH', 'CI'}, {'EW'}, {'MNST'}, 
+{'DGX', 'LH'}, {'VRSK'}, {'ABBV'}, {'HRL'}, {'SYY'}, {'ADSK'},
+{'DRI'}, {'RCL', 'CCL'}, {'AVGO', 'SWKS'}, {'FL'}, {'FSLR'}, {'NWL'}, 
+{'UHS', 'HCA'}, {'HAR'}, {'MCD'}, {'QRVO'}, {'NLSN'}, {'KLAC'}, 
+{'KSS'}, {'MO', 'RAI', 'PM'}, {'WMB'}, {'CERN'}, {'ADM'}, {'DD'}, 
+{'RHT'}, {'HRS'}, {'APD'}, {'YHOO'}, {'LVLT'}, {'CTL'}, {'AA'}, {'MYL'}, 
+{'GPN'}, {'AGN'}, {'MNK'}, {'EA'}, {'QCOM'}, {'DE'}, 
+{'DIS', 'TWX', 'FOX', 'FOXA', 'CMCSA'}, {'GT'}, {'EBAY'}, {'ABC'}, 
+{'NVDA'}, {'AIZ'}, {'DVA'}, {'CBG'}, {'MHK'}, {'FB'}, {'CF'}, {'WBA'}, 
+{'GLW'}, {'STX', 'WDC'}, {'EIX', 'PCG', 'CNP', 'AVB', 'DLR', 'SPG',
+'EXR', 'PNW', 'ESS', 'DTE', 'KIM', 'AEP', 'CMS', 'PPL', 'ED', 'EXC', 
+'D', 'CCI', 'XEL', 'PEG', 'DUK', 'FE', 'SO', 'HCP', 'LNT', 'EQR', 'ETR',
+'SCG', 'BXP', 'UDR', 'VNO', 'NI', 'SRE', 'AWK', 'GGP', 'AMT', 'O',
+'AEE', 'SLG', 'HCN', 'AIV', 'PSA', 'VTR', 'WEC', 'PLD', 'FRT', 'ES'},
+{'JNPR'}, {'CTXS'}, {'SIG'}, {'TSO', 'VLO', 'MPC', 'PSX'}, {'ZBH'}, 
+{'SPLS'}, {'GILD'}, {'FBHS'}, {'HST'}, {'HPQ'}, {'MSI'}, {'TDG'}, 
+{'MCK'}, {'CVS'}, {'MAT'}, {'FIS'}, {'RHI'}, {'AXP'}, {'LRCX', 'AMAT'}, 
+{'NRG'}, {'JBHT'}, {'COH'}, {'GM', 'F'}, {'GRMN'}, {'NUE'}, {'ENDP'}, 
+{'EL'}, {'ZTS'}, {'RL'}, {'VRSN'}, {'ISRG'}, {'CHRW', 'EXPD'}, {'GE'}, 
+{'PRGO'}, {'TXN', 'MMM', 'HP', 'APH', 'GIS', 'VAR', 'HES', 'SCHW',
+'COP', 'C', 'TSS', 'CFG', 'GD', 'PG', 'XL', 'OXY', 'JNJ', 'BA', 'TMO',
+'FISV', 'HAL', 'ACN', 'IPG', 'DHR', 'CAT', 'CME', 'A', 'LYB', 'WAT', 
+'IBM', 'SPGI', 'HD', 'RRC', 'WFC', 'ROP', 'FTI', 'ROK', 'AFL', 'MDT', 
+'CTSH', 'CXO', 'RTN', 'PGR', 'DO', 'ZION', 'CPB', 'LOW', 'KMB', 
+'T', 'UPS', 'BLK', 'JPM', 'HSIC', 'UNM', 'DOW', 'PKI', 'ECL', 'EOG',
+'GS', 'HBAN', 'CTAS', 'NFX', 'MS', 'ADP', 'SBUX', 'STI', 'OMC', 
+'LLTC', 'EMN', 'INTU', 'XLNX', 'MMC', 'GPC', 'PX', 'CVX', 'DVN', 
+'VZ', 'BRK-B', 'ABT', 'PNR', 'TXT', 'CMA', 'BHI', 'MET', 'TEL', 
+'NTRS', 'XOM', 'AIG', 'FDX', 'XEC', 'BK', 'BDX', 'PCAR', 'AME', 
+'TSCO', 'PH', 'UTX', 'PAYX', 'MTB', 'SE', 'CHD', 'INTC', 'MCO', 
+'APA', 'NDAQ', 'ICE', 'JCI', 'SYK', 'KO', 'BBT', 'PEP', 'REGN', 'V', 
+'STT', 'DNB', 'SWK', 'BCR', 'AJG', 'AMP', 'KMI', 'ADI', 'PPG', 'LM', 
+'FLR', 'PFG', 'HIG', 'K', 'RF', 'CA', 'KEY', 'SHW', 'BAC', 'MRO', 
+'AON', 'CB', 'ETN', 'CL', 'AMG', 'LLL', 'AMGN', 'FLS', 'BWA', 
+'MCHP', 'COG', 'FITB', 'HON', 'CINF', 'NBL', 'SWN', 'EQT', 'PNC', 
+'AVY', 'DOV', 'L', 'XYL', 'PBCT', 'OKE', 'TROW', 'SNA', 'CAH', 
+'LNC', 'IVZ', 'PRU', 'MKC', 'DPS', 'JEC', 'ETFC', 'EMR', 'DFS', 
+'ITW', 'CMI', 'CELG', 'MA', 'SLB', 'TMK', 'NOV', 'BEN', 'MRK', 
+'DLPH', 'PXD', 'LMT', 'NOC', 'APC', 'USB', 'IFF', 'COL', 'COF', 
+'CLX', 'MUR', 'TYC', 'TRV', 'RIG'}, {'FCX'}, {'VIAB'}, {'LB'}, {'WU'}, 
+{'ALL'}, {'CBS'}, {'LUK'}, {'BF-B'}, {'YUM'}, {'BBY'}, {'ADBE'}, 
+{'NSC', 'UNP', 'CSX', 'KSU'}, {'MON'}, {'MSFT'}, {'DHI', 'LEN', 'PHM'}, 
+{'CSCO'}, {'ALB'}, {'IP'}, {'NFLX'}, {'CRM'}, {'SYF'}, {'EQIX'}, 
+{'AMZN'}, {'PVH'}, {'HOG'}, {'HUM'}, {'MAC'}, {'XRAY'}, {'FLIR'}, 
+{'MJN'}, {'PDCO'}, {'MOS'}, {'TGT'}, {'IR'}, {'GPS'}, {'VRTX'}, {'EFX'}, 
+{'BLL'}, {'ORCL'}, {'KORS'}, {'ADS'}, {'ALLE'}, {'WMT'}, {'DG'}, 
+{'UAL', 'DAL', 'AAL', 'LUV', 'ALK'}, {'FAST', 'GWW'}, {'DLTR'},
+{'CAG'}, {'KMX'}, {'SEE'}, {'SYMC'}, {'BMY'}, {'WFM'}, {'PWR'},
+{'URI'}, {'M'}, {'CHK'}, {'TAP'}, {'BBBY'}, {'NAVI'}, {'OI'}]
+
     For k = 2000, 218 clusters are generated.
     
 
 
 An example of clusters at k = 2000 includes {'DAL', 'AAL', 'LUV', 'UAL', 'ALK'}. This cluster contains all airlines, which would make sense that their returns are significantly correlated. Fuel spikes, travel delays, and passenger volumes affect the entire aviation industry, so all airlines within it would have similar returns. 
 
-Another cluster at is {'UNH', 'CI', 'AET', 'CNC', 'ANTM'}. This cluter contains all health insurance or pharamaceutical companies. Because of the beginning of the Affordable Care Act (Obamacare) the health insurance and pharamaceutical companies suddently had many more patients to insure. Additionally, the way medicine was being paid for shifted due to the law coming into effect. Therefore, the health industry is significantly correlated due to the Affordable Care Act.
+Another cluster at is {'UNH', 'CI', 'AET', 'CNC', 'ANTM'}. This cluster contains all health insurance or pharmaceutical companies. Because of the beginning of the Affordable Care Act (Obamacare) the health insurance and pharmaceutical companies suddenly had many more patients to insure. Additionally, the way medicine was being paid for shifted due to the law coming into effect. Therefore, the health industry is significantly correlated due to the Affordable Care Act.
 
 A third cluster includes {'MAR', 'HOT', 'WYN'}, three large chains of hotels. Similarly to airlines, the industry operates heavily based on seasonal volume, local events, and travel habits on national holidays such as July 4th, Labor Day, and Memorial Day. Christmas and Easter travel habits also strongly affect the hotels industry. Because the three stocks are direct competitors, they face similar returns in relation to the market.
 
 A further cluster within the groupings includes {'VLO', 'PSX', 'TSO', 'MPC'}, all oil companies competing heavily in the fracking industry. Due to oil prices plummeting due to decreased demand and a boom in supply from shale oil and fracking, these companies faced a struggle for revenues. Their stocks decreased significantly throughout the year, noted by sharp declines as OPEC held meetings to keep production steady.
 
-Another cluster within the S&P 500 returns is a series of railroads, {'KSU', 'NSC', 'UNP', 'CSX'}. Because the industry operates in an oligopily due to the difficulty of installing rail track, the firms are all closely linked in strong rivalry. Market pressures such as the West Coast port strikes and decreased demand for goods shipped inland from China affected their returns equally, leading to highly correlated stocks.
+Another cluster within the S&P 500 returns is a series of railroads, {'KSU', 'NSC', 'UNP', 'CSX'}. Because the industry operates in an oligopoly due to the difficulty of installing rail track, the firms are all closely linked in strong rivalry. Market pressures such as the West Coast port strikes and decreased demand for goods shipped inland from China affected their returns equally, leading to highly correlated stocks.
 
 The large entertainment studios in the S&P 500 are also strongly correlated with each other. {'FOX', 'FOXA', 'DIS', 'CMCSA', 'TWX'} experienced similarly correlated returns primarily because the entire industry operates on a seasonal basis, with new shows appearing in the fall and prices moving accordingly. In addition the industry as a whole faces pressure from industry disruptor Netflix, a company that is causing traditional forms of entertainment to decline.
 
-The final cluster higlighted is one comprising of three tobacco firms, {'MO', 'PM', 'RAI'}. Their returns would be strongly correlated by the release of potentially negative studies showing the risks of smoking on a person's health.
+The final cluster highlighted is one comprising of three tobacco firms, {'MO', 'PM', 'RAI'}. Their returns would be strongly correlated by the release of potentially negative studies showing the risks of smoking on a person's health.
 
 In general, the clustering algorithm mirrors the S&P 500 well. Companies in the same industry, usually direct competitors, have highly correlated returns. Companies that do not have a counterpart on the index are in their own cluster, generating returns relatively independently. This is why portfolio diversification works, as individual stocks in separate industries are less correlated. Finally, there exists a large cluster of stocks, signifying general industry. These stocks represent the a snapshot of the American economy as a whole, moving along with the market.
 
 ## Prim's and Kruskal's Algorithm
 
-The algorithm that we have executed above is Kruskal's Algorithm. We start with a forest of one node trees, and we join the trees greedily, starting with the edges with the least cost or highest benefit, in this example highest correlation, for up to $k$ times. 
+The algorithm that we have executed above is Kruskal's Algorithm. We start with a forest of one node trees, and we join the trees greedily, starting with the edges with the least cost or highest benefit, in this example highest correlation, for up to k times. 
 
-Kruskal's algorithm is a greedy algorithm that generates a Minimum Spanning Tree (MST) given a set of nodes and edges. Our algorithm works very similarly to Kruskal's algorithm, except that our algorithm terminates after $k$ interations, and not when a spanning tree is formed.
+Kruskal's algorithm is a greedy algorithm that generates a Minimum Spanning Tree (MST) given a set of nodes and edges. Our algorithm works very similarly to Kruskal's algorithm, except that our algorithm terminates after k iterations, and not when a spanning tree is formed.
 
 Our algorithm also tries to generate "trees" where each tree is a cluster. Our end result is a forest that consists of a number of trees. In our algorithm, we have prevented any cycles from forming. If the two nodes connected to an edge are in the same cluster, then they will have the same "bottom" node. Our algorithm will then make no changes. Similarly, if an edge connects two nodes within a tree, it will not add the edge to the tree, or it will form a cycle.
 
@@ -935,9 +1063,9 @@ percent_change[['MO', 'PM', 'RAI']].plot()
 
 ![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_75_1.png){:class="img-responsive"}
 
-## Normalised Prices
+## Normalized Prices
 
-Similarly, for normalised price movement (each stock starts at price = 1 at the start of the year), the stocks within each cluster seems to perform closely. Within the airline cluster, ALK posts significantly better than the other firms in the cluster. Its general shape, however, mimics the other stocks in the group with declines and upticks at similar periods. While the returns for some stocks within each group might outperform (or underperform) others, the timing of movements in either direction occurs on the same day. These significant movements in price occur because of an event that affected the entire industry, so all stocks within the cluster move similarly.
+Similarly, for normalized price movement (each stock starts at price = 1 at the start of the year), the stocks within each cluster seems to perform closely. Within the airline cluster, ALK posts significantly better than the other firms in the cluster. Its general shape, however, mimics the other stocks in the group with declines and upticks at similar periods. While the returns for some stocks within each group might outperform (or underperform) others, the timing of movements in either direction occurs on the same day. These significant movements in price occur because of an event that affected the entire industry, so all stocks within the cluster move similarly.
 
 
 ```python
@@ -954,7 +1082,7 @@ pricesScaled[['DAL', 'AAL', 'LUV', 'UAL', 'ALK']].plot()
 
 
 
-![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_76_1.png){:class="img-responsive"}
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_77_1.png){:class="img-responsive"}
 
 
 ```python
@@ -969,7 +1097,7 @@ pricesScaled[['UNH', 'CI', 'AET', 'CNC', 'ANTM']].plot()
 
 
 
-![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_77_1.png){:class="img-responsive"}
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_78_1.png){:class="img-responsive"}
 
 
 ```python
@@ -984,7 +1112,7 @@ pricesScaled[['MAR', 'HOT', 'WYN']].plot()
 
 
 
-![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_78_1.png){:class="img-responsive"}
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_79_1.png){:class="img-responsive"}
 
 
 ```python
@@ -999,7 +1127,7 @@ pricesScaled[['VLO', 'PSX', 'TSO', 'MPC']].plot()
 
 
 
-![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_79_1.png){:class="img-responsive"}
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_80_1.png){:class="img-responsive"}
 
 
 ```python
@@ -1014,7 +1142,7 @@ pricesScaled[['KSU', 'NSC', 'UNP', 'CSX']].plot()
 
 
 
-![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_80_1.png){:class="img-responsive"}
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_81_1.png){:class="img-responsive"}
 
 
 ```python
@@ -1029,7 +1157,7 @@ pricesScaled[['FOX', 'FOXA', 'DIS', 'CMCSA', 'TWX']].plot()
 
 
 
-![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_81_1.png){:class="img-responsive"}
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_82_1.png){:class="img-responsive"}
 
 
 ```python
@@ -1044,27 +1172,27 @@ pricesScaled[['MO', 'PM', 'RAI']].plot()
 
 
 
-![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_82_1.png){:class="img-responsive"}
+![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_83_1.png){:class="img-responsive"}
 
 ## Alternative Clustering Methods
 
-### Agglomerative heirachical clustering
-An example that is very similar to the one we have done is agglomerative clustering. The main difference is that the algorithm does not terminate after $k$ steps. Instead, it keeps going until all clusters are merged. At each step, we record the "distance" between clusters when merging. When the algorithm terminates, we need only examine the "distances" between the clusters and choose a maximimum "distance", then break the links between all clusters that were at least that far apart before merging.
+### Agglomerative hierarchical clustering
+An example that is very similar to the one we have done is agglomerative clustering. The main difference is that the algorithm does not terminate after k steps. Instead, it keeps going until all clusters are merged. At each step, we record the "distance" between clusters when merging. When the algorithm terminates, we need only examine the "distances" between the clusters and choose a maximum "distance", then break the links between all clusters that were at least that far apart before merging.
 
-The advantage of this method is that we do not need to determine $k$ before we begin the algorithm, we need only run the algorithm once and decide what $k$ should be after. Alternatively, plotting a dendogram would give us a visual aid to determine our cut off distance. Furthermore, by changing the way we determine distance between clusters, we could achieve much tighter clusters.
+The advantage of this method is that we do not need to determine k before we begin the algorithm, we need only run the algorithm once and decide what k should be after. Alternatively, plotting a dendrogram would give us a visual aid to determine our cut off distance. Furthermore, by changing the way we determine distance between clusters, we could achieve much tighter clusters.
 
 The disadvantage is that there is a need to decide how to calculate "distance" between clusters. The distance between any two nodes is straightforward, the correlation between the two nodes. Now consider that we have two clusters of size $n$ and $m$. In this case how do we define distance? Do we use single linkage, the shortest distance between any two nodes from both clusters? Or complete linkage, the farthest distance?
 
 In our case, we want to cluster stocks such that they are all closely related. It would make sense to use average linkage, the average correlation between all pairwise stocks. This helps to enforce clusters that are all close to each other, with no node in a cluster being too far away from the other. 
 
-Another major disadvantage to using heirachical clustering is the need to update our distances at every iteration. Adding on the fact that calculating the distance between two clusters is O(nm), the time complexity of carrying out this operation would be much greater. 
+Another major disadvantage to using hierarchical clustering is the need to update our distances at every iteration. Adding on the fact that calculating the distance between two clusters is O(nm), the time complexity of carrying out this operation would be much greater. 
 
 
-### $k$ medoids clustering
+### k-medoids clustering
 
-The basic idea of $k$ medoids clustering in this context is to pick a pre-determined $k$ nodes as "centers" , put them into $k$ different clusters, then assign every other node to the nearest center. In a $k$-means algorithm, in the next iteration, we would determine a "center". This is done by finding the means of each cluster. However, this would require us to provide co-ordinates, which is something we do not have for this problem. Instead, the $k$ medoids algorithm simply picks the node that is closest to the center to be the new center. For every node, we calculate the sum of its distance ($1$-correlation) to every other member of its cluster. Then for each cluster, pick the node with the smallest sum of distance ot be the new medoid, then carry out the next iteration.
+The basic idea of k medoids clustering in this context is to pick a pre-determined k nodes as "centers" , put them into k different clusters, then assign every other node to the nearest center. In a k-means algorithm, in the next iteration, we would determine a "center". This is done by finding the means of each cluster. However, this would require us to provide co-ordinates, which is something we do not have for this problem. Instead, the k medoids algorithm simply picks the node that is closest to the center to be the new center. For every node, we calculate the sum of its distance to every other member of its cluster. Then for each cluster, pick the node with the smallest sum of distance to be the new medoid, then carry out the next iteration.
 
-1. Randomly assign $k$ nodes as medoids of $k$ clusters
+1. Randomly assign k nodes as medoids of k clusters
 2. Assign every other node to cluster of its closest medoid
 3. For each cluster:
   1. For each node in cluster:
@@ -1072,7 +1200,7 @@ The basic idea of $k$ medoids clustering in this context is to pick a pre-determ
   2. Set node with smallest sum of distance as new medoid
 4. Repeat steps 2-3
 
-Calculating the sum of distance for every node in the graph is an expensive operation that runs in O($n^2$) time, where $n$ is the maximum number of nodes in a cluster. Instead of calculating all sum of distance, we can instead use a greedy approach, step 3-1 then becomes:
+Calculating the sum of distance for every node in the graph is an expensive operation that runs in O(n^2) time, where n is the maximum number of nodes in a cluster. Instead of calculating all sum of distance, we can instead use a greedy approach, step 3-1 then becomes:
 
 1. For each node in cluster:
   1. Calculate sum of distance
@@ -1080,16 +1208,11 @@ Calculating the sum of distance for every node in the graph is an expensive oper
     1. Set node as new medoid
     2. break
       
-The main advantage of this method over the others is its ability to re-allocate nodes into different clusters. For the given algorithm and heirachical clustering, once a node is in a cluster, it will never be re-allocated. With $k$ medoids however, the algorithm will constantly re-assign nodes into the most appropriate cluster.
+The main advantage of this method over the others is its ability to re-allocate nodes into different clusters. For the given algorithm and hierarchical clustering, once a node is in a cluster, it will never be re-allocated. With k medoids however, the algorithm will constantly re-assign nodes into the most appropriate cluster.
 
 The disadvantage is the need to pre-specify the number of clusters. Before running any algorithms, it is hard to determine how many clusters there should be.
 
-To counter this problem, we can consider a hybrid of both solutions. First, we do a heirachical cluster to determine the number of clusters, $k$. Using this result, we then run the $k$-medoids algorithm.
+To counter this problem, we can consider a hybrid of both solutions. First, we do a hierarchical cluster to determine the number of clusters, k. Using this result, we then run the k-medoids algorithm.
 
 
-If you've made it down this far, I'm really impressed!!! Hope you enjoyed my first post!
-
-
-```python
-
-```
+*If you've made it down this far, I'm really impressed!!! Hope you enjoyed my first post!* :)
