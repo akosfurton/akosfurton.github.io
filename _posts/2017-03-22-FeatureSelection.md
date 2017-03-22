@@ -87,9 +87,9 @@ loans_full_knn = cross_val_score(KNeighborsClassifier(n_neighbors = 1),
 
 
 ```python
-print("Accuracy of Logistic Regression: %.2f" % (np.mean(loans_full_logistic) * 100), "%")
+print("Accuracy of Logistic Regression: %.2f"%(np.mean(loans_full_logistic)*100), "%")
 print("Accuracy of Decision Tree: %.2f" % (np.mean(loans_full_tree) * 100), "%")
-#print("Accuracy of k-Nearest Neighbor: %.2f" % (np.mean(loans_full_knn) * 100), "%")
+print("Accuracy of k-Nearest Neighbor: %.2f" % (np.mean(loans_full_knn) * 100), "%")
 ```
 
     Accuracy of Logistic Regression: 82.04 %
@@ -157,7 +157,7 @@ loans_reduced_knn = cross_val_score(KNeighborsClassifier(n_neighbors = 1),
 
 
 ```python
-print("Accuracy of Logistic Regression: %.2f" % (np.mean(loans_reduced_logistic) * 100), "%")
+print("Accuracy of Logistic Regression: %.2f"%(np.mean(loans_reduced_logistic)*100), "%")
 print("Accuracy of Decision Tree: %.2f" % (np.mean(loans_reduced_tree) * 100), "%")
 print("Accuracy of 1-Nearest Neighbor: %.2f" % (np.mean(loans_reduced_knn) * 100), "%")
 ```
@@ -178,7 +178,8 @@ To keep our model size the same as above, we set the penalty term such that our 
 LR_l1 = LogisticRegression(C = 0.002, penalty='l1')
 LR_l1.fit(xScaled, y)
 
-interceptDF = pd.DataFrame(LR_l1.intercept_, index = ['Intercept'], columns = ['Value'])
+interceptDF = pd.DataFrame(LR_l1.intercept_, index = ['Intercept'], 
+		     columns = ['Value'])
 coefDF = pd.DataFrame(LR_l1.coef_[0][np.where(LR_l1.coef_[0] != 0)], 
                       index = xDF.columns[np.where(LR_l1.coef_[0] != 0)], 
                       columns = ['Value'])
@@ -219,23 +220,30 @@ Now that we have an algorithmically selected set of predictors, we want to see a
 
 
 ```python
-attrLASSO = ['loan_amnt', 'int_rate', 'installment', 'annual_inc', 'dti', 'inq_last_6mths', \
+attrLASSO = ['loan_amnt', 'int_rate', 'installment', \ 
+	     'annual_inc', 'dti', 'inq_last_6mths', \
              'out_prncp', 'total_rec_prncp', 'issue_year', 'GRADE_A']
 
 x_LASSO = xDF.loc[ : , attrLASSO].as_matrix()
 xScaled_LASSO = StandardScaler().fit_transform(x_LASSO)
 
-loans_LASSO_logistic = cross_val_score(LogisticRegression(), x_LASSO, y, scoring = 'accuracy', 
-                                         cv = KFold(10, shuffle = True, random_state = seedValue))
-loans_LASSO_tree = cross_val_score(DecisionTreeClassifier(random_state = seedValue), x_LASSO, y, 
-                                   scoring = 'accuracy', cv = KFold(10, shuffle = True, random_state = seedValue))
-loans_LASSO_knn = cross_val_score(KNeighborsClassifier(n_neighbors = 1), xScaled_LASSO, y, scoring = 'accuracy', 
-                                    cv = KFold(10, shuffle = True, random_state = seedValue))
+loans_LASSO_logistic = cross_val_score(LogisticRegression(), x_LASSO, y, 
+				       scoring = 'accuracy', 
+                                         cv = KFold(10, shuffle = True, 
+                                         random_state = seedValue))
+loans_LASSO_tree = cross_val_score(DecisionTreeClassifier(random_state = seedValue), 
+				  x_LASSO, y, 
+                                   scoring = 'accuracy', cv = KFold(10, 
+                                   shuffle = True, random_state = seedValue))
+loans_LASSO_knn = cross_val_score(KNeighborsClassifier(n_neighbors = 1), 
+				   xScaled_LASSO, y, scoring = 'accuracy', 
+                                    cv = KFold(10, shuffle = True, 
+                                    random_state = seedValue))
 ```
 
 
 ```python
-print("Accuracy of Logistic Regression: %.2f" % (np.mean(loans_LASSO_logistic) * 100), "%")
+print("Accuracy of Logistic Regression: %.2f"%(np.mean(loans_LASSO_logistic)*100), "%")
 print("Accuracy of Decision Tree: %.2f" % (np.mean(loans_LASSO_tree) * 100), "%")
 print("Accuracy of 1-Nearest Neighbor: %.2f" % (np.mean(loans_LASSO_knn) * 100), "%")
 ```
@@ -259,7 +267,8 @@ The Random Forest considerably outperforms all of our prior classification algor
 
 
 ```python
-loans_LASSO_RandomForest = cross_val_score(RandomForestClassifier(), x_LASSO, y, scoring = 'accuracy',
+loans_LASSO_RandomForest = cross_val_score(RandomForestClassifier(), 
+	       x_LASSO, y, scoring = 'accuracy',
                cv = KFold(10, shuffle = True, random_state = seedValue)).mean()
 
 print("Accuracy of Random Forest: %.2f" % (loans_LASSO_RandomForest * 100), "%")
