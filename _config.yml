@@ -38,5 +38,5 @@ pages_list:
   Github:   'https://github.com/akosfurton'
   LinkedIn: 'https://www.linkedin.com/in/akosfurton/'
   Email Me: 'mailto:akos.furton@gmail.com'
-  Resume:   'akosfurton.com/assets/downloads/resume.pdf'
+  Resume:   '/assets/downloads/resume.pdf'
   Archive:  '/archive'
