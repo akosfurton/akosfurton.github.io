@@ -34,9 +34,9 @@ gems:
   - jekyll-gist
 
 pages_list:
-  About: '/about'
-  Github: 'https://github.com/akosfurton'
+  About Me: '/about'
+  Github:   'https://github.com/akosfurton'
   LinkedIn: 'https://www.linkedin.com/in/akosfurton/'
   Email Me: 'mailto:akos.furton@gmail.com'
-  Resume: 'https://drive.google.com/file/d/0B5FjbZuZokNdeVIwUF9RYV95Tzg/view'
-  Archive: '/archive'
+  Resume:   'akosfurton.com/assets/downloads/resume.pdf'
+  Archive:  '/archive'
