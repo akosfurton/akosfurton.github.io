@@ -5,7 +5,7 @@ permalink:           pretty
 title:               Akos Furton
 tagline:             Statistics Made Simple
 url:                 www.akosfurton.com
-baseurl:             "akosfurton.com"
+baseurl:             ""
 paginate:            10
 
 excerpt_separator:   "\n\n"
