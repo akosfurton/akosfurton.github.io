@@ -5,7 +5,7 @@ comments: True
 permalink: stock-clustering
 ---
 
-This analysis explores clustering in the S&P 500 index. By identifying stocks that move together, we can predict stock price movements of similar stocks. Through the pandas, numpy, and matplotlib libraries, we calculate metrics to model the stock market. By employing Prim and Kruskal's clustering algorithms, we can discover patterns in the underlying structure of equities.
+Explore clustering in the S&P 500 index by identifying stocks that move together. Predict stock price movements through Python's pandas, numpy, and matplotlib libraries. Implement Prim and Kruskal's clustering algorithms to discover patterns in the underlying structure of equities.
 
 To do this, we use the 2015 daily adjusted close prices of all of the firms listed on the S&P 500. The data can be found on and downloaded from websites such as Google Finance or Yahoo Finance. The exact dataset used in this post can be found [here](https://www.dropbox.com/s/ra5a4w1h82fjq6u/SP_500_close_2015.csv) and [here](https://www.dropbox.com/s/ahof61wjlaz27ee/SP_500_firms.csv).
 

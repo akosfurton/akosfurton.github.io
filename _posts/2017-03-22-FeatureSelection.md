@@ -5,7 +5,7 @@ comments: True
 permalink: feature-selection
 ---
 
-In this post, we explore how to select the right variables in a machine learning algorithm. We aim to build a predictive model to identify loans that are likely to default. In the process, we encounter the topics of oversampling, error types and the LASSO within the context of the Python sklearn environment. 
+Learn how to select the right variables in a machine learning algorithm by building a predictive model to identify loans that are likely to default. In the process, encounter oversampling, error types and the LASSO within the context of the Python sklearn environment. 
 
 One of the most relevant topics in machine learning is identifying which data attributes to use in your predictive models. Data scientists can develop ever more robust machine learning algorithms, but at its core, garbage data in = garbage data out. Today, it is increasingly easy to store large quantities of data. However, too many attributes can confuse models and render the analysis useless. Therefore, before investing time into tuning algorithms we need to identify a set of predictors with high predictive accuracy without loss of dimensionality. Benefits of a reduced set of predictors include decreased computational complexity, lower storage costs, and easier to interpret results.
 
