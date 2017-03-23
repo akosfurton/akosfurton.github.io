@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Stock Market Clustering
+title: Stock Market Clustering with Prim's Algorithm
 comments: True
 permalink: stock-clustering
 ---
 
-The goal of this analysis is to explore clustering in the S&P 500 index. By identifying stocks that move together, we can predict stock price movements of similar stocks.
+This analysis explores clustering in the S&P 500 index. By identifying stocks that move together, we can predict stock price movements of similar stocks. Through the pandas, numpy, and matplotlib libraries, we calculate metrics to model the stock market. By employing Prim and Kruskal's clustering algorithms, we can discover patterns in the underlying structure of equities.
 
 To do this, we use the 2015 daily adjusted close prices of all of the firms listed on the S&P 500. The data can be found on and downloaded from websites such as Google Finance or Yahoo Finance. The exact dataset used in this post can be found [here](https://www.dropbox.com/s/ra5a4w1h82fjq6u/SP_500_close_2015.csv) and [here](https://www.dropbox.com/s/ahof61wjlaz27ee/SP_500_firms.csv).
 
@@ -685,65 +685,6 @@ nodePointers, nodeStarting, nodeBottom
 print(recoverSets(nodePointers, nodeStarting, nodeBottom))
 ```
 
-[{'HP', 'APH', 'GIS', 'SCHW', 'AAPL', 'KIM', 'SRCL', 'TSS', 'MU', 
-'MLM', 'CNC', 'GD', 'APD', 'XL', 'JWN', 'MAS', 'ROST', 'BA', 
-'HAL', 'WHR', 'AES', 'A', 'WAT', 'LRCX', 'SJM', 'R', 'RRC', 
-'ROP', 'AKAM', 'WM', 'VTR', 'CTSH', 'MDT', 'PGR', 'NEM', 
-'DO', 'BAX', 'CPB', 'JPM', 'DISCA', 'AMZN', 'DOW', 'PKI', 
-'IRM', 'FLIR', 'PM', 'HBAN', 'HPQ', 'AET', 'BMY', 'NFX', 
-'MNST', 'ADP', 'OMC', 'EMN', 'GPC', 'BXP', 'FL', 'VNO', 
-'QRVO', 'ABT', 'CERN', 'TXT', 'MET', 'MAC', 'ES', 'UAL', 
-'EA', 'BK', 'BDX', 'AN', 'PH', 'CBG', 'SE', 'GOOG', 'STX', 
-'MCO', 'TSO', 'NDAQ', 'JCI', 'FBHS', 'HST', 'LNT', 'SYK', 
-'TDG', 'NWS', 'SRE', 'AMAT', 'JBHT', 'ENDP', 'PPG', 'CHRW', 
-'PSA', 'BIIB', 'K', 'KEY', 'BF-B', 'LLL', 'IP', 'NFLX', 'CRM', 'LEN', '
-COG', 'NBL', 'PNC', 'L', 'TROW', 'AZO', 'IVZ', 'PRU', 'ORCL', 
-'DPS', 'WMT', 'DFS', 'AWK', 'ORLY', 'CMI', 'CELG', 'SLB', 
-'NOV', 'USB', 'MON', 'PLD', 'TAP', 'BBBY', 'NAVI', 'GOOGL',
-'MMM', 'AAP', 'FMC', 'KR', 'EQIX', 'FOXA', 'FOX', 'FTR', 'STZ', 
-'URBN', 'FISV', 'ACN', 'IPG', 'DHR', 'CME', 'HBI', 'AMT', 'UA', 
-'ROK', 'BSX', 'ULTA', 'T', 'WY', 'UPS', 'ECL', 'AEP', 'EOG', 
-'VMC', 'ZBH', 'DLTR', 'D', 'VRSK', 'LLTC', 'INTU', 'SYY', 'XLNX', 
-'CCL', 'AVGO', 'TJX', 'HCA', 'NLSN', 'KLAC', 'ANTM', 'KSS', '
-BRK-B', 'MO', 'WMB', 'ADM', 'CMA', 'DD', 'RHT', 'BHI', 'HRS', 
-'TEL', 'COST', 'MYL', 'FDX', 'QCOM', 'DE', 'CMCSA', 'ABC',
-'NVDA', 'PCAR', 'DVA', 'FB', 'EW', 'CF', 'WBA', 'MTB', 'CHD', 
-'APA', 'FIS', 'HSY', 'MSI', 'DNB', 'RHI', 'WFM', 'TRV', 'BCR', '
-O', 'AMP', 'EL', 'KORS', 'LM', 'VRSN', 'FLR', 'PFG', 'GE', 'CA', '
-AMG', 'CL', 'CNP', 'ALB', 'CMS', 'MCHP', 'XEL', 'XYL', 'AVY', 
-'SNA', 'PDCO', 'RSG', 'F', 'CAH', 'UHS', 'ETFC', 'EMR', 'ALK', 
-'BEN', 'SYMC', 'APC', 'COF', 'CBS', 'IR', 'TYC', 'RIG', 'M', '
-TXN', 'AVB', 'VAR', 'NTAP', 'ILMN', 'ESS', 'HAS', 'COP', 'OXY',
-'PBI', 'JNJ', 'TMO', 'CAT', 'CMG', 'STJ', 'BLL', 'NI', 'TRIP', 
-'LEG', 'MDLZ', 'PCLN', 'HD', 'AEE', 'CAG', 'FTI', 'AFL', 'AIV', 
-'RTN', 'ALXN', 'AAL', 'ZION', 'MPC', 'LOW', 'PCG', 'GM', 
-'ATVI', 'BLK', 'HOLX', 'HSIC', 'TSN', 'VFC', 'EMC', 'ED', 
-'WYNN', 'CTAS', 'LH', 'SBUX', 'STI', 'TIF', 'ETR', 'PX', 'HAR', 
-'CVX', 'DVN', 'MCD', 'EBAY', 'PNR', 'LUK', 'PVH', 'AIG', 'AA', 
-'XEC', 'GPN', 'MNK', 'TSCO', 'AME', 'AIZ', 'MHK', 'UTX', 'EXC', 
-'DUK', 'ICE', 'GILD', 'ZTS', 'KO', 'PEP', 'STT', 'MAT', 'RCL', 
-'SWK', 'NRG', 'AJG', 'ADI', 'SLG', 'RL', 'WEC', 'DGX', 'SNI', 
-'AGN', 'DLR', 'KSU', 'GWW', 'FITB', 'SYF', 'CINF', 'SWN', 
-'XRAY', 'DOV', 'NSC', 'MOS', 'TGT', 'SO', 'HCP', 'EQR', 'GPS',
-'AYI', 'VRTX', 'EFX', 'MKC', 'ADSK', 'ALLE', 'DG', 'GGP', 
-'PHM', 'ITW', 'FAST', 'MRK', 'RAI', 'KMX', 'PXD', 'NOC', 'IFF', 
-'COL', 'CLX', 'URI', 'MUR', 'HES', 'PFE', 'SPG', 'LLY', 'DTE', 
-'DIS', 'C', 'CFG', 'CSX', 'PG', 'SEE', 'PSX', 'XRX', 'SCG', 'LYB', 
-'IBM', 'SPGI', 'NWSA', 'WFC', 'HCN', 'FFIV', 'CXO', 'MAR',
-'KMB', 'UNM', 'PNW', 'LKQ', 'HRB', 'GS', 'TGNA', 'TDC', 'NKE', 
-'MS', 'VLO', 'ABBV', 'HRL', 'MMC', 'LUV', 'FSLR', 'NWL', 'TWX',
-'VZ', 'WDC', 'NTRS', 'XOM', 'YHOO', 'LVLT', 'FRT', 'CTL', 'DAL',
-'UNH', 'EIX', 'GT', 'EXPE', 'EXR', 'PAYX', 'GLW', 'EXPD', 'CCI',
-'UNP', 'CTXS', 'INTC', 'SIG', 'PEG', 'SPLS', 'FE', 'CI', 'BBT', 
-'MCK', 'CVS', 'REGN', 'V', 'COH', 'KMI', 'GRMN', 'NUE', 'PWR',
-'ESRX', 'JNPR', 'ISRG', 'HIG', 'PRGO', 'RF', 'FCX', 'VIAB', 
-'SHW', 'LB', 'ADBE', 'WU', 'ALL', 'BAC', 'MRO', 'AON', 'CB', 
-'ETN', 'HOT', 'BBY', 'MSFT', 'AMGN', 'DHI', 'FLS', 'CSCO', 
-'YUM', 'BWA', 'PPL', 'HON', 'EQT', 'HOG', 'HUM', 'PBCT', 'OKE',
-'MJN', 'LNC', 'WYN', 'UDR', 'DISCK', 'ADS', 'JEC', 'DRI', 
-'TMK', 'MA', 'AXP', 'DLPH', 'LMT', 'SWKS', 'CHK', 'OI'}]
-
-
 In contrast, if we set k = 0, then each stock would be clustered in its own set, which is not useful information either. Therefore, we have to find a suitable value for k such that the stocks will be in small, useful clusters. We settle on k = 2000, which gives us a balance between clusters with only one or two stocks and a single giant cluster of the entire S&P 500 index. 
 
 What we notice is that many firms reside on their own, barely correlated with any other firm in the index. This makes sense because a number of industries only have one company listed. Additionally, there exists a large cluster of firms. The massive group represents the American economy as a whole. As these stocks move, so too does the United States' economic health. 
@@ -758,69 +699,8 @@ print("For k = 2000, " + str(len(cluster_2000)) +
 			" clusters are generated." + '\n')
 ```
 
-[{'GOOGL', 'GOOG'}, {'PFE'}, {'AAP'}, {'NTAP'}, {'ILMN'}, {'FMC'}, 
-{'HAS'}, {'AAPL'}, {'COST'}, {'SRCL'}, {'MLM', 'VMC'}, {'MU'}, 
-{'ESRX'}, {'FTR'}, {'STZ'}, {'JWN'}, {'MAS'}, {'TJX', 'ROST'}, {'LLY'}, 
-{'PBI'}, {'URBN'}, {'XRX'}, {'CMG'}, {'WHR'}, {'WM', 'RSG'}, {'AES'},
-{'STJ'}, {'ORLY', 'AZO'}, {'TRIP'}, {'LEG'}, {'HBI'}, {'NWSA', 'NWS'}, 
-{'MDLZ'}, {'SJM'}, {'PCLN'}, {'R'}, {'UA'}, {'EXPE'}, {'FFIV'}, 
-{'AKAM'}, {'BSX'}, {'HSY'}, {'KR'}, {'NEM'}, {'AYI'}, {'BAX'}, {'BIIB'}, 
-{'ALXN'}, {'AN'}, {'HOT', 'MAR', 'WYN'}, {'TIF'}, {'ULTA'}, {'WY'}, 
-{'ATVI'}, {'HOLX'}, {'TSN'}, {'LKQ'}, {'SNI', 'DISCA', 'DISCK'}, 
-{'HRB'}, {'IRM'}, {'VFC'}, {'EMC'}, {'TGNA'}, {'TDC'}, {'NKE'}, 
-{'WYNN'}, {'ANTM', 'AET', 'CNC', 'UNH', 'CI'}, {'EW'}, {'MNST'}, 
-{'DGX', 'LH'}, {'VRSK'}, {'ABBV'}, {'HRL'}, {'SYY'}, {'ADSK'},
-{'DRI'}, {'RCL', 'CCL'}, {'AVGO', 'SWKS'}, {'FL'}, {'FSLR'}, {'NWL'}, 
-{'UHS', 'HCA'}, {'HAR'}, {'MCD'}, {'QRVO'}, {'NLSN'}, {'KLAC'}, 
-{'KSS'}, {'MO', 'RAI', 'PM'}, {'WMB'}, {'CERN'}, {'ADM'}, {'DD'}, 
-{'RHT'}, {'HRS'}, {'APD'}, {'YHOO'}, {'LVLT'}, {'CTL'}, {'AA'}, {'MYL'}, 
-{'GPN'}, {'AGN'}, {'MNK'}, {'EA'}, {'QCOM'}, {'DE'}, 
-{'DIS', 'TWX', 'FOX', 'FOXA', 'CMCSA'}, {'GT'}, {'EBAY'}, {'ABC'}, 
-{'NVDA'}, {'AIZ'}, {'DVA'}, {'CBG'}, {'MHK'}, {'FB'}, {'CF'}, {'WBA'}, 
-{'GLW'}, {'STX', 'WDC'}, {'EIX', 'PCG', 'CNP', 'AVB', 'DLR', 'SPG',
-'EXR', 'PNW', 'ESS', 'DTE', 'KIM', 'AEP', 'CMS', 'PPL', 'ED', 'EXC', 
-'D', 'CCI', 'XEL', 'PEG', 'DUK', 'FE', 'SO', 'HCP', 'LNT', 'EQR', 'ETR',
-'SCG', 'BXP', 'UDR', 'VNO', 'NI', 'SRE', 'AWK', 'GGP', 'AMT', 'O',
-'AEE', 'SLG', 'HCN', 'AIV', 'PSA', 'VTR', 'WEC', 'PLD', 'FRT', 'ES'},
-{'JNPR'}, {'CTXS'}, {'SIG'}, {'TSO', 'VLO', 'MPC', 'PSX'}, {'ZBH'}, 
-{'SPLS'}, {'GILD'}, {'FBHS'}, {'HST'}, {'HPQ'}, {'MSI'}, {'TDG'}, 
-{'MCK'}, {'CVS'}, {'MAT'}, {'FIS'}, {'RHI'}, {'AXP'}, {'LRCX', 'AMAT'}, 
-{'NRG'}, {'JBHT'}, {'COH'}, {'GM', 'F'}, {'GRMN'}, {'NUE'}, {'ENDP'}, 
-{'EL'}, {'ZTS'}, {'RL'}, {'VRSN'}, {'ISRG'}, {'CHRW', 'EXPD'}, {'GE'}, 
-{'PRGO'}, {'TXN', 'MMM', 'HP', 'APH', 'GIS', 'VAR', 'HES', 'SCHW',
-'COP', 'C', 'TSS', 'CFG', 'GD', 'PG', 'XL', 'OXY', 'JNJ', 'BA', 'TMO',
-'FISV', 'HAL', 'ACN', 'IPG', 'DHR', 'CAT', 'CME', 'A', 'LYB', 'WAT', 
-'IBM', 'SPGI', 'HD', 'RRC', 'WFC', 'ROP', 'FTI', 'ROK', 'AFL', 'MDT', 
-'CTSH', 'CXO', 'RTN', 'PGR', 'DO', 'ZION', 'CPB', 'LOW', 'KMB', 
-'T', 'UPS', 'BLK', 'JPM', 'HSIC', 'UNM', 'DOW', 'PKI', 'ECL', 'EOG',
-'GS', 'HBAN', 'CTAS', 'NFX', 'MS', 'ADP', 'SBUX', 'STI', 'OMC', 
-'LLTC', 'EMN', 'INTU', 'XLNX', 'MMC', 'GPC', 'PX', 'CVX', 'DVN', 
-'VZ', 'BRK-B', 'ABT', 'PNR', 'TXT', 'CMA', 'BHI', 'MET', 'TEL', 
-'NTRS', 'XOM', 'AIG', 'FDX', 'XEC', 'BK', 'BDX', 'PCAR', 'AME', 
-'TSCO', 'PH', 'UTX', 'PAYX', 'MTB', 'SE', 'CHD', 'INTC', 'MCO', 
-'APA', 'NDAQ', 'ICE', 'JCI', 'SYK', 'KO', 'BBT', 'PEP', 'REGN', 'V', 
-'STT', 'DNB', 'SWK', 'BCR', 'AJG', 'AMP', 'KMI', 'ADI', 'PPG', 'LM', 
-'FLR', 'PFG', 'HIG', 'K', 'RF', 'CA', 'KEY', 'SHW', 'BAC', 'MRO', 
-'AON', 'CB', 'ETN', 'CL', 'AMG', 'LLL', 'AMGN', 'FLS', 'BWA', 
-'MCHP', 'COG', 'FITB', 'HON', 'CINF', 'NBL', 'SWN', 'EQT', 'PNC', 
-'AVY', 'DOV', 'L', 'XYL', 'PBCT', 'OKE', 'TROW', 'SNA', 'CAH', 
-'LNC', 'IVZ', 'PRU', 'MKC', 'DPS', 'JEC', 'ETFC', 'EMR', 'DFS', 
-'ITW', 'CMI', 'CELG', 'MA', 'SLB', 'TMK', 'NOV', 'BEN', 'MRK', 
-'DLPH', 'PXD', 'LMT', 'NOC', 'APC', 'USB', 'IFF', 'COL', 'COF', 
-'CLX', 'MUR', 'TYC', 'TRV', 'RIG'}, {'FCX'}, {'VIAB'}, {'LB'}, {'WU'}, 
-{'ALL'}, {'CBS'}, {'LUK'}, {'BF-B'}, {'YUM'}, {'BBY'}, {'ADBE'}, 
-{'NSC', 'UNP', 'CSX', 'KSU'}, {'MON'}, {'MSFT'}, {'DHI', 'LEN', 'PHM'}, 
-{'CSCO'}, {'ALB'}, {'IP'}, {'NFLX'}, {'CRM'}, {'SYF'}, {'EQIX'}, 
-{'AMZN'}, {'PVH'}, {'HOG'}, {'HUM'}, {'MAC'}, {'XRAY'}, {'FLIR'}, 
-{'MJN'}, {'PDCO'}, {'MOS'}, {'TGT'}, {'IR'}, {'GPS'}, {'VRTX'}, {'EFX'}, 
-{'BLL'}, {'ORCL'}, {'KORS'}, {'ADS'}, {'ALLE'}, {'WMT'}, {'DG'}, 
-{'UAL', 'DAL', 'AAL', 'LUV', 'ALK'}, {'FAST', 'GWW'}, {'DLTR'},
-{'CAG'}, {'KMX'}, {'SEE'}, {'SYMC'}, {'BMY'}, {'WFM'}, {'PWR'},
-{'URI'}, {'M'}, {'CHK'}, {'TAP'}, {'BBBY'}, {'NAVI'}, {'OI'}]
-
     For k = 2000, 218 clusters are generated.
     
-
 
 An example of clusters at k = 2000 includes {'DAL', 'AAL', 'LUV', 'UAL', 'ALK'}. This cluster contains all airlines, which would make sense that their returns are significantly correlated. Fuel spikes, travel delays, and passenger volumes affect the entire aviation industry, so all airlines within it would have similar returns. 
 
@@ -855,25 +735,12 @@ Once we have identified our clusters, we want to plot their returns to verify th
 percent_change[['DAL', 'AAL', 'LUV', 'UAL', 'ALK']].plot()
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1093c3be0>
-
 ![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_69_1.png){:class="img-responsive"}
 
 
 ```python
 percent_change[['UNH', 'CI', 'AET', 'CNC', 'ANTM']].plot()
 ```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1093dc630>
-
-
-
 
 ![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_70_1.png){:class="img-responsive"}
 
@@ -882,28 +749,12 @@ percent_change[['UNH', 'CI', 'AET', 'CNC', 'ANTM']].plot()
 percent_change[['MAR', 'HOT', 'WYN']].plot()
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1093eda90>
-
-
-
-
 ![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_71_1.png){:class="img-responsive"}
 
 
 ```python
 percent_change[['VLO', 'PSX', 'TSO', 'MPC']].plot()
 ```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x108805390>
-
-
-
 
 ![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_72_1.png){:class="img-responsive"}
 
@@ -912,14 +763,6 @@ percent_change[['VLO', 'PSX', 'TSO', 'MPC']].plot()
 percent_change[['KSU', 'NSC', 'UNP', 'CSX']].plot()
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x108999a58>
-
-
-
-
 ![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_73_1.png){:class="img-responsive"}
 
 
@@ -927,28 +770,12 @@ percent_change[['KSU', 'NSC', 'UNP', 'CSX']].plot()
 percent_change[['FOX', 'FOXA', 'DIS', 'CMCSA', 'TWX']].plot()
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x108e7bb00>
-
-
-
-
 ![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_74_1.png){:class="img-responsive"}
 
 
 ```python
 percent_change[['MO', 'PM', 'RAI']].plot()
 ```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x109822f28>
-
-
-
 
 ![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_75_1.png){:class="img-responsive"}
 
@@ -963,28 +790,12 @@ pricesScaled = priceData.divide(priceData.ix[0])
 pricesScaled[['DAL', 'AAL', 'LUV', 'UAL', 'ALK']].plot()
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x10a141ac8>
-
-
-
-
 ![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_77_1.png){:class="img-responsive"}
 
 
 ```python
 pricesScaled[['UNH', 'CI', 'AET', 'CNC', 'ANTM']].plot()
 ```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x10a1997b8>
-
-
-
 
 ![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_78_1.png){:class="img-responsive"}
 
@@ -993,28 +804,12 @@ pricesScaled[['UNH', 'CI', 'AET', 'CNC', 'ANTM']].plot()
 pricesScaled[['MAR', 'HOT', 'WYN']].plot()
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x10a77b8d0>
-
-
-
-
 ![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_79_1.png){:class="img-responsive"}
 
 
 ```python
 pricesScaled[['VLO', 'PSX', 'TSO', 'MPC']].plot()
 ```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x10a8a94a8>
-
-
-
 
 ![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_80_1.png){:class="img-responsive"}
 
@@ -1023,28 +818,12 @@ pricesScaled[['VLO', 'PSX', 'TSO', 'MPC']].plot()
 pricesScaled[['KSU', 'NSC', 'UNP', 'CSX']].plot()
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x10a9ce400>
-
-
-
-
 ![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_81_1.png){:class="img-responsive"}
 
 
 ```python
 pricesScaled[['FOX', 'FOXA', 'DIS', 'CMCSA', 'TWX']].plot()
 ```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x10ac27ac8>
-
-
-
 
 ![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_82_1.png){:class="img-responsive"}
 
@@ -1053,53 +832,6 @@ pricesScaled[['FOX', 'FOXA', 'DIS', 'CMCSA', 'TWX']].plot()
 pricesScaled[['MO', 'PM', 'RAI']].plot()
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x10ac83b70>
-
-
-
-
 ![image1](assets/posts/2017-01-23-Stock-Clustering_files/2017-01-23-Stock-Clustering_83_1.png){:class="img-responsive"}
-
-## Alternative Clustering Methods
-
-### Agglomerative hierarchical clustering
-An example that is very similar to the one we have done is agglomerative clustering. The main difference is that the algorithm does not terminate after k steps. Instead, it keeps going until all clusters are merged. At each step, we record the "distance" between clusters when merging. When the algorithm terminates, we need only examine the "distances" between the clusters and choose a maximum "distance", then break the links between all clusters that were at least that far apart before merging.
-
-The advantage of this method is that we do not need to determine k before we begin the algorithm, we need only run the algorithm once and decide what k should be after. Alternatively, plotting a dendrogram would give us a visual aid to determine our cut off distance. Furthermore, by changing the way we determine distance between clusters, we could achieve much tighter clusters.
-
-The disadvantage is that there is a need to decide how to calculate "distance" between clusters. The distance between any two nodes is straightforward, the correlation between the two nodes. Now consider that we have two clusters of size n and m. In this case how do we define distance? Do we use single linkage, the shortest distance between any two nodes from both clusters? Or complete linkage, the farthest distance?
-
-In our case, we want to cluster stocks such that they are all closely related. It would make sense to use average linkage, the average correlation between all pairwise stocks. This helps to enforce clusters that are all close to each other, with no node in a cluster being too far away from the other. 
-
-Another major disadvantage to using hierarchical clustering is the need to update our distances at every iteration. Adding on the fact that calculating the distance between two clusters is O(nm), the time complexity of carrying out this operation would be much greater. 
-
-
-### k-medoids clustering
-
-The basic idea of k medoids clustering in this context is to pick a pre-determined k nodes as "centers", put them into k different clusters, then assign every other node to the nearest center. In a k-means algorithm, in the next iteration, we would determine a "center". This is done by finding the means of each cluster. However, this would require us to provide co-ordinates, which is something we do not have for this problem. Instead, the k medoids algorithm simply picks the node that is closest to the center to be the new center. For every node, we calculate the sum of its distance to every other member of its cluster. Then for each cluster, pick the node with the smallest sum of distance to be the new medoid, then carry out the next iteration.
-
-1. Randomly assign k nodes as medoids of k clusters
-2. Assign every other node to cluster of its closest medoid
-3. For each cluster and for each node in cluster
-    
-    a. Calculate sum of distance between node and all other nodes in cluster
-    
-    b. Set node with smallest sum of distance as new medoid
-4. Repeat steps 2-3
-
-Calculating the sum of distance for every node in the graph is an expensive operation that runs in O(n^2) time, where n is the maximum number of nodes in a cluster. Instead of calculating all sum of distance, we can instead use a greedy approach, step 3-a then becomes:
-
-1. For each node in cluster, calculate sum of distance
-2. If new sum of distance < old sum of distance, then set node as new medoid
-      
-The main advantage of this method over the others is its ability to re-allocate nodes into different clusters. For the given algorithm and hierarchical clustering, once a node is in a cluster, it will never be re-allocated. With k medoids however, the algorithm will constantly re-assign nodes into the most appropriate cluster.
-
-The disadvantage is the need to pre-specify the number of clusters. Before running any algorithms, it is hard to determine how many clusters there should be.
-
-To counter this problem, we can consider a hybrid of both solutions. First, we do a hierarchical cluster to determine the number of clusters, k. Using this result, we then run the k-medoids algorithm.
-
 
 *If you've made it down this far, I'm really impressed!!! Hope you enjoyed my first post!* :)
