@@ -5,8 +5,9 @@ permalink:           pretty
 title:               Akos Furton
 tagline:             Statistics Made Simple
 url:                 www.akosfurton.com
-paginate:            1
-baseurl:             ""
+baseurl:             "akosfurton.com"
+
+excerpt_separator:   "\n\n"
 
 # Assets
 #
@@ -28,12 +29,12 @@ github:
 
 # Gems
 gems:
-  - jekyll-paginate
   - jekyll-gist
 
 pages_list:
   About: '/about'
-  My Github: 'https://github.com/akosfurton'
+  Github: 'https://github.com/akosfurton'
+  LinkedIn: 'https://www.linkedin.com/in/akosfurton/'
   Email Me: 'mailto:akos.furton@gmail.com'
   Resume: 'https://drive.google.com/file/d/0B5FjbZuZokNdeVIwUF9RYV95Tzg/view'
   Archive: '/archive'
