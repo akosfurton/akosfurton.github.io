@@ -1,0 +1,476 @@
+retailer,type,company_id,location,country,sq_ft,yr_open,lat,lon
+target,general merchandise,T-580,"6175 Greenbrier Rd, Madison, Alabama, 35756",United States of America,1357500,2000,34.6449995,-86.84391439
+target,general merchandise,T-588,"25 N 75th Ave, Phoenix, Arizona, 85043",United States of America,1530700,2002,33.44837487,-112.2210892
+target,general merchandise,T-0553,"14750 Miller Avenue, Fontana, California, 92336",United States of America,1423000,1987,34.112064,-117.480529
+target,general merchandise,T-0555,"2050 East Beamer Street, Woodland, California, 957776",United States of America,1862000,1988,NA,NA
+target,general merchandise,T-0593,"3880 Zachary Ave, Shafter, California, 93263",United States of America,2100000,2003,35.44491959,-119.1851349
+target,general merchandise,T-3806,"3105 N Mango Ave, Rialto, California, 92377",United States of America,1850000,2006,34.15308103,-117.4315853
+target,general merchandise,T-0554,"34800 United Avenue, Pueblo, Colorado, 81001",United States of America,1500000,1986,38.2795372,-104.4673309
+target,general merchandise,T-0556,"110 West Jordan Road, Tifton, Georgia, 31794",United States of America,1560000,1989,31.43824959,-83.44924927
+target,general merchandise,T-3808,"1247 Sunbury Rd, Midway, Georgia, 31320",United States of America,1500000,2007,31.77520561,-81.35263824
+target,general merchandise,T-3809,"1115 Macom Dr, DeKalb, Illinois, 60115",United States of America,1500000,2006,41.91262521,-88.74066465
+target,general merchandise,T-0559,"7551 W Morris, Indianapolis, Indiana, 46231",United States of America,1470000,1998,39.74670792,-86.29574585
+target,general merchandise,T-0590,"2200 Viking Rd, Cedar Falls, Iowa, 50613",United States of America,1350000,2003,42.48106766,-92.47042084
+target,general merchandise,T-3803,"1100 SW 57th St, Topeka, Kansas, 66609",United States of America,1350000,2004,38.96431491,-95.69550924
+target,general merchandise,T-0587,"12735 E L Ave, Galesburg, Michigan, 49053",United States of America,1357400,2002,42.27784729,-85.38256073
+target,general merchandise,T-0551,"7120 Highway 65 N. E., Fridley, Minnesota, 55432",United States of America,1156000,1969,45.09867096,-93.24638367
+target,general merchandise,T-0579,"129 North Road, Wilton, New York, 12831",United States of America,1500000,1998,43.179019,-73.718132
+target,general merchandise,T-3802,"1800 State Highway 5S, Amsterdam, New York, 12010",United States of America,1476500,2005,42.93460786,-74.24039327
+target,general merchandise,T-3811,"1800 Stover Ct, Newton, North Carolina, 28658",United States of America,1670000,2009,35.62177658,-81.30474854
+target,general merchandise,T-3804,"1 Walker Way, West Jefferson, Ohio, 43162",United States of America,1500000,2004,39.94981766,-83.34776306
+target,general merchandise,T-0558,"875 Beta Drive SW, Albany, Oregon, 97321",United States of America,1470000,1997,44.5801239,-123.1146774
+target,general merchandise,T-0589,"3001 Archer Dr, Chambersburg, Pennsylvania, 17202",United States of America,1350000,2003,39.89291847,-77.67080516
+target,general merchandise,T-0594,"22 Corporate Dr , Lugoff, South Carolina, 29078",United States of America,1802000,2003,34.179306,-80.679016
+target,general merchandise,T-0578,"13786 Harvey Road, Tyler, Texas, 75706",United States of America,1752500,1997,32.46493556,-95.41824929
+target,general merchandise,T-3801,"4333 Power Way, Midlothian, Texas, 76065",United States of America,1350000,2004,32.43489075,-97.05619812
+target,general merchandise,T-0560,"345 Mount Vernon Road, Stuarts Draft, Virginia, 24477",United States of America,1650000,1997,38.02953339,-78.99951935
+target,general merchandise,T-0557,"1100 Valley Road, Oconomowoc, Wisconsin, 53066",United States of America,1500000,1994,43.07913589,-88.4768219
+target,general merchandise,T-7301,"260199 High Plains Blvd, Balzac, Alberta, T4A 0P9",Canada ,1300000,2013,NA,NA
+target,general merchandise,T-7300,"8450 Boston Church Road, Milton, Ontario, L9T 8E4",Canada ,1320000,2013,43.5352652,-79.8903028
+target,general merchandise,T-7302,"1501 Industrial Park Drive, Cornwall, Ontario, K6H 7M4",Canada ,1350000,2013,45.04797,-74.70932
+target,inbound,T-3807,"3110 Alder Ave , Rialto, California, 92336",United States of America,1530000,2006,34.15272903,-117.4262238
+target,inbound,T-3810,"211 Little Hearst Pkwy, Savannah, Georgia, 31407",United States of America,2029500,2006,32.17382813,-81.17550659
+target,inbound,T-3800,"300 Manning Bridge Road, Suffolk, Virginia, 23434-8592",United States of America,1800000,2003,36.70747757,-76.66335297
+target,inbound,T-0600,"3500 Marvin Road N.E., Lacey, Washington, 98516",United States of America,2000000,2003,47.0815239,-122.7728577
+target,food,T-3899,"2245 W Renaissance Rd, Rialto, California, 92376",United States of America,500000,2014,34.11080933,-117.3803101
+target,food,T-3892,"3049 North US 441, Lake City, Florida, 32055",United States of America,430000,2008,30.23220442,-82.63850771
+target,food,T-3880,"42 Commerce Parkway, West Jefferson, Ohio, 43162",United States of America,438000,2014,39.95128669,-83.34030099
+target,food,T-3895,"2115 Technology Parkway, Cedar Falls, Iowa, 50613",United States of America,430000,2009,42.47648621,-92.47128296
+target,food,T-3897,"3952 Corbin Road, Denton, Texas, 76207",United States of America,360000,2013,33.18693392,-97.17337623
+target,e-commerce,T-9478,"8940 E. Rita Park Drive, Tucson, Arizona, 85747-9108",United States of America,975000,2008,32.08920288,-110.7978516
+target,e-commerce,T-9479,"1505 South Haven, Ontario, California, 91761",United States of America,725000,2009,34.04602051,-117.5717316
+target,e-commerce,T-9407,"9501 Hudson Rd, Woodbury, Minnesota, 55125",United States of America,325000,1988,44.9454422,-92.91287231
+target,e-commerce,TBD,"5461 Davidson Road, Memphis, Tennessee,38118",United States of America,900000,2015,NA,NA
+target,e-commerce,TBD,"325 S. Salem Church Road, York, Pennsylvania, 17408",United States of America,785400,2015,39.93283081,-76.82025909
+target,returns,TBD,"225 Transfer Drive, Indianapolis, Indiana, 46214",United States of America,190000,1992,39.768615,-86.295372
+target,closed,T-3893,"455 S. 75th Avenue, Phoenix, Arizona, 85043",United States of America,138000,2005,33.44340134,-112.2195435
+target,closed,T-0595,"1505 South Haven, Ontario, California, 91761",United States of America,1225000,2001,34.04602051,-117.5717316
+target,closed,T-0552,"600 Carnahan Drive, Maumelle, Little Rock, Arkansas, 72113",United States of America,852000,1982,34.85473251,-92.3946991
+target,closed,T-3894,"5500 South Freeway, Fort Worth, Texas, 76115",United States of America,769800,2008,32.668697,-97.324783
+target,closed,T-7301,"260199 High Plains Blvd, Balzac, Alberta, T4A 0P9",Canada ,1300000,2013,NA,NA
+target,closed,T-7300,"8450 Boston Church Road, Milton, Ontario, L9T 8E4",Canada ,1320000,2013,43.5352652,-79.8903028
+target,closed,T-7302,"1501 Industrial Park Drive, Cornwall, Ontario, K6H 7M4",Canada ,1350000,2013,45.04797,-74.70932
+walmart,general merchandise,6006,"2200 7th Avenue SW, Cullman, AL, 35055",United States of America,1200000,1983,34.14238572,-86.8459864
+walmart,general merchandise,6094,"5801 Southwest Regional Airport Boulevard, Bentonville, AR, 72712-9431",United States of America,1200000,1998,36.32155991,-94.25616455
+walmart,general merchandise,6018,"405 E Booth Rd, Searcy, AR, 72143-8854",United States of America,1100000,1990,35.22402272,-91.7293556
+walmart,general merchandise,6031,"23701 West Southern Avenue, Buckeye, AZ, 85326-4928",United States of America,1550000,1993,33.3880043,-112.5579224
+walmart,general merchandise,7033,"21101 Johnson Road, Apple Valley, CA, 92307",United States of America,1340000,2004,34.59734344,-117.1975861
+walmart,general merchandise,6021,"1300 South F Street, Porterville, CA, 93257-5968",United States of America,1200000,1991,36.0459671,-119.0195618
+walmart,general merchandise,6026,"10815 State Highway 99W, Red Bluff, CA, 96080",United States of America,1170000,1994,40.10584965,-122.1875402
+walmart,general merchandise,6019,"7500 East Crossroads Blvd, Loveland, CO, 80538",United States of America,1078500,1990,40.42881012,-104.968483
+walmart,general merchandise,7034,"4860 Wheatley’s Pond Rd, Smyrna, DE, 19977",United States of America,1200000,2004,NA,NA
+walmart,general merchandise,7035,"18815 NW 115th Ave, Alachua, FL, 32615-6056",United States of America,1200000,2006,29.76182476,-82.54183017
+walmart,general merchandise,6020,"5100 Kettering Road, Brooksville, FL, 34602-8311",United States of America,1600000,1992,28.49736977,-82.21511078
+walmart,general merchandise,7038,"4001 S Jenkins Rd, Fort Pierce (St Lucie County), FL, 34981-4620",United States of America,1200000,2004,27.3935318,-80.38800049
+walmart,general merchandise,6010,"1401 Baker Hwy W ((or 690 Highway 206), Douglas, GA, 31533",United States of America,994000,1986,31.502794,-82.86985
+walmart,general merchandise,6054,"385 Callaway Church Rd, LaGrange, GA, 30241",United States of America,1130000,2000,33.03390503,-84.95891571
+walmart,general merchandise,6009,"1501 E Mapleleaf Dr (or 1100 North Iris Street), Mt Pleasant, IA, 52641",United States of America,1244000,1985,40.977725,-91.528022
+walmart,general merchandise,6092,"3100 Illinois Highway 89, Spring Valley, IL, 61362",United States of America,1200000,2001,41.31980896,-89.19985962
+walmart,general merchandise,6017,"2100 East Tipton Street, Seymour, IN, 47274",United States of America,1100000,1990,38.95601654,-85.84926605
+walmart,general merchandise,6035,"3300 Highway K 68 (or 3270 Nevada Terrace), Ottawa, KS, 66067",United States of America,1200000,1995,38.61915207,-95.27883911
+walmart,general merchandise,6066,"690 Crenshaw Blvd, Hopkinsville, KY, 42240",United States of America,1200000,2003,36.7348175,-87.47741699
+walmart,general merchandise,6048,"3160 Highway 743, Opelousas, LA, 70570",United States of America,1200000,1999,30.58095865,-92.03240834
+walmart,general merchandise,6043,"510 Jonesville Rd, Coldwater, MI, 49036",United States of America,1100000,2001,41.98560007,-84.98004533
+walmart,general merchandise,6069,"1100 Matlock Dr., St. James, MO, 65559",United States of America,1200000,2001,38.01033095,-91.62312604
+walmart,general merchandise,6011,"2200 & 2210 Manufacturers Blvd., Brookhaven, MS, 39601",United States of America,1000000,1986,31.613824,-90.420204
+walmart,general merchandise,6040,"1057 Sand Hill Road, Hope Mills, NC, 28348-9467",United States of America,1200000,1997,34.93288502,-78.89790908
+walmart,general merchandise,6070,"220 Wal-Mart Drive, Shelby, NC, 28150",United States of America,1200000,2002,35.3071785,-81.57785797
+walmart,general merchandise,6030,"42 Freetown Road, Raymond, NH, 03077-2385",United States of America,1100000,1996,43.02552536,-71.1665985
+walmart,general merchandise,6038/7052,"8827 Old River Rd, Marcy, NY, 13403",United States of America,1200000,1994,43.17313766,-75.31317139
+walmart,general merchandise,6024,"3880 Southwest Blvd, Grove City, OH,  43123",United States of America,1100000,1992,39.896869,-83.101959
+walmart,general merchandise,6037,"2650 Highway 395 South, Hermiston, OR, 97838",United States of America,1175000,1998,45.81106447,-119.251336
+walmart,general merchandise,6080/7041,"300 Veterans Dr., Tobyhanna, PA, 18466",United States of America,1119245,2002,41.16779052,-75.40476099
+walmart,general merchandise,6027,"100 Wal-Mart Dr. State Rte 970, Woodland, PA, 16881",United States of America,1190000,1993,40.89651108,-77.83875275
+walmart,general merchandise,6039,"1655 Pottertown Rd (1655 Bobwhite Trl), Midway (Bulls Gap), TN, 37809",United States of America,1200000,1997,36.15398788,-83.03527069
+walmart,general merchandise,6016/6139,"3900 North Ih 35, New Braunfels, TX, 78130",United States of America,1204000,1988,29.73512459,-98.06399536
+walmart,general merchandise,6036/7027,"14863 FM 645 (or 8660 South US Hwy 79), Palestine, TX, 75803",United States of America,1200000,1996,31.87180519,-95.65638733
+walmart,general merchandise,6012,"3100 North-I 27, Plainview, TX, 79072",United States of America,1200000,1986,34.19462204,-101.7744064
+walmart,general merchandise,6068,"2120 N Stemmons St., Sanger, TX, 76266",United States of America,1200000,2001,33.39661159,-97.17625022
+walmart,general merchandise,7036,"3162 Brast Rd., Sealy, TX, 77474",United States of America,1200000,2005,29.74129982,-96.19430959
+walmart,general merchandise,7026,"929 North State Rd. 138, Grantsville, UT, 84029",United States of America,1250000,2005,40.60549164,-112.2565079
+walmart,general merchandise,7045,"6000 Walton Way, Mount Crawford, VA, 22841",United States of America,1200000,2005,38.36468887,-78.91730499
+walmart,general merchandise,6023,"21504 Cox Rd, Sutherland, VA, 23885",United States of America,1200000,1991,37.19511911,-77.53369264
+walmart,general merchandise,7039,"115 Distribution Way, Beaver Dam, WI, 53916",United States of America,1200000,2007,43.51396561,-88.79357147
+walmart,general merchandise,6025,"6100 3M Dr, Menomonie, WI, 54751",United States of America,1170000,1993,44.89780045,-91.85990906
+walmart,general merchandise,TBD,"Childs Avenue, Merced, CA",United States of America,1200000,2013,37.28826141,-120.488533
+walmart,food,7019,"1005 Sara G Lott Blvd, Brundidge, AL, 36010",United States of America,890000,2003,31.72030538,-85.83729543
+walmart,food,6095,"2701 Andrews Road, Opelika (Lee County), AL, 36801-9543",United States of America,880000,2000,32.76654434,-86.84028625
+walmart,food,6082,"3300 Sterling Hurley Ind Highway, Clarksville, AR, 72830-1200",United States of America,850000,1993,35.43241359,-93.52949739
+walmart,food,7013,"868 W Peters Rd, Casa Grande, AZ, 85122",United States of America,875100,2003,32.86489105,-111.7703171
+walmart,food,7023,"6785 SW Enterprize Blvd, Arcadia, FL, 34269-6701",United States of America,940000,2005,27.04011536,-81.95446777
+walmart,food,6099,"2686 Commerce Rd., MacClenny, FL, 32063",United States of America,880000,2002,30.29337311,-82.08572388
+walmart,food,6071,"5600 State Rd. 544, Winter Haven, FL, 33881",United States of America,1000000,1996,28.073276,-81.676582
+walmart,food,6055,"655 Unisia Dr., Monroe, GA, 30656",United States of America,880000,2000,33.80782507,-83.67588088
+walmart,food,6059,"3801 US Highway 50 E, Olney, IL, 62450",United States of America,933100,1997,38.71059418,-88.12199402
+walmart,food,7024,"23769 Mathew Rd, Sterling, IL, 61081",United States of America,1000000,2006,41.77968487,-89.79052886
+walmart,food,7055,"100 Fischer Pkwy., Gas City, IN, 46933",United States of America,990000,2007,40.47694016,-85.5820694
+walmart,food,6097,"3701 Russell Dyche Memorial Hwy, London, KY, 40741",United States of America,867000,1995,37.14321899,-84.17465973
+walmart,food,6057,"45346 Parkway Blvd, Robert, LA, 70455",United States of America,850000,2001,30.51451631,-90.32036439
+walmart,food,7014,"31 Alfred A Plourde Pkwy, Lewiston, ME, 04240",United States of America,892700,2005,44.06219043,-70.19020334
+walmart,food,6065,"5100 Brookhart Dr., Suite 100, Harrisonville, MO, 64701",United States of America,850000,2001,38.61112976,-94.35575104
+walmart,food,6072,"973 State Highway 30 W, New Albany, MS, 38652",United States of America,867000,1996,34.49154161,-89.06369448
+walmart,food,7018,"3001 E. State Farm Rd., North Platte, NE, 69101",United States of America,880000,2003,41.09014995,-100.727159
+walmart,food,6084,"670 Los Morros Rd NW, Los Lunas, NM, 87031",United States of America,750000,1999,34.82611465,-106.7698212
+walmart,food,7048,"2155 USA Pkwy, Sparks (MacCarran), NV, 89434",United States of America,890000,2006,39.537708,-119.47602
+walmart,food,6096,"300 Enterprise Rd, Johnstown, NY, 12095-3345",United States of America,868000,2000,42.98913574,-74.40527344
+walmart,food,7012,"1400 Old Chillicothe Rd S, Washington Court House, OH, 43160",United States of America,880000,2002,39.52074923,-83.3952447
+walmart,food,7017,"843 State Route 43, Wintersville (Steubenville), OH, 43952",United States of America,880000,2003,40.41030787,-80.73916376
+walmart,food,7015,"397319 West 3000 Rd., Ochelata (Bartlesville/Ramona), OK, 74051",United States of America,893900,2005,35.58269501,-97.50861359
+walmart,food,6042,"2601 South Indian Meridian Rd, Pauls Valley, OK, 73075",United States of America,860000,2000,34.70013499,-97.24772036
+walmart,food,6047,"181 Walmart Road, Bedford (Cessna), PA, 15522",United States of America,830000,1998,40.09368315,-78.52418482
+walmart,food,7030,"390 Highridge Park Rd., Pottsville, PA, 17901",United States of America,900000,2006,40.73660128,-76.30917236
+walmart,food,6073,"160 Dove Sutton Road, Pageland, SC, 29728-1556",United States of America,830000,1997,34.80149031,-80.40986225
+walmart,food,6062,"285 Frank Martin Rd, Shelbyville, TN, 37160",United States of America,850000,2001,35.56541443,-86.46109009
+walmart,food,6064,"3470 Windmill Rd., Cleburne, TX, 76033",United States of America,888000,2002,32.407485,-97.426528
+walmart,food,7010,"20131 Gene Campbell Rd, New Caney, TX, 77357",United States of America,901000,2003,30.16754039,-95.30000277
+walmart,food,6083,"9605 MW HK Dodgen Loop, Temple, TX, 76504",United States of America,850000,1993,31.144451,-97.364006
+walmart,food,6090,"5400 W. Highway 83, Corinne, UT, 84307",United States of America,875000,2000,41.55830272,-112.1441909
+walmart,food,7016,"10695 Freedom Trail, Gordonsville, VA, 22942-6938",United States of America,880000,2003,37.98262405,-78.20178223
+walmart,food,7021,"546 Woodall Rd., Grandview, WA, 98930",United States of America,880000,2004,46.27877045,-119.9207382
+walmart,food,6085,"525 Industrial Dr, Tomah, WI, 54660",United States of America,880000,2000,43.93996015,-90.8290118
+walmart,food,7077,"426 Logistics Dr, Cheyenne, WY, 82009",United States of America,890000,2007,41.1199913,-104.8998871
+walmart,food,TBD,"19799 East 36th Drive, Majestic Commerce Center, Aurora, CA, 80011",United States of America,450000,2018,37.25510025,-119.6175232
+walmart,food,7084,"1001 Columbia Ave., Riverside, CA, 92507",United States of America,520000,2011,34.00297165,-117.3325958
+walmart,food,6074,"1729 State Road 8, Auburn (Garrett), IN, 46706",United States of America,400000,2001,41.36657439,-85.11051536
+walmart,food,6077,"1309 Highway 24 East, Moberly, MO, 65270",United States of America,450000,2002,39.44658883,-92.41768956
+walmart,food,6091,"680 Vanco Mill Rd., Henderson, NC, 27537",United States of America,400000,2002,36.29383586,-78.38238381
+walmart,food,6056,"591 Apache Trail, Terrell, TX, 75160",United States of America,420000,2000,32.73051453,-96.3343277
+walmart,food,7079,"101 Sohler Dr, Mankato, MN, 56001",United States of America,450000,2015,44.12759781,-93.97535706
+walmart,food,TBD,"Kimrey Road, Hawfields (Mebane), NC, 27302",United States of America,450000,2016,36.050279,-79.328786
+walmart,food,7047,"13550 Valley Blvd, Fontana, CA, 92335",United States of America,758000,2004,34.072727,-117.512977
+walmart,fashion,6051/4751,"1110 S.E. 10th, Bentonville, AR, 72716",United States of America,640000,1986,36.35857773,-94.194664
+walmart,fashion,6008,"2100 Southeast 5th Street, Bentonville, AR, 72712-6128",United States of America,705600,1980,36.36559677,-94.18887329
+walmart,fashion,6022/7040,"333 S. 10th St., Greencastle, IN, 46135",United States of America,1515000,1991,39.64176245,-86.8317204
+walmart,fashion,6041,"100 High St (721 Hwy Rte 20), Sharon Springs, NY,  13459-9510",United States of America,800000,1995,42.77457047,-74.58434296
+walmart,fashion,6014/7031,"1050 Vern Cora Rd, Laurens, SC, 29360",United States of America,1630860,1988,34.54901123,-81.99890137
+walmart,fashion,6005,"201 Old Elkhart Road, Palestine, TX, 75801",United States of America,893700,1981,31.74209213,-95.61906433
+walmart,fashion,6029,"152 North Highway 91, Hurricane, UT, 84737",United States of America,1170000,1993,37.16911979,-113.4233236
+walmart,footwear,6007,"8100 S Zero Street, Fort Smith, AR, 72903-6600",United States of America,236100,1990,35.3208,-94.344627
+walmart,e-commerce,8103,"6750 Kimball Ave., Chino, CA, 91708",United States of America,1200000,2016,33.96850213,-117.6576311
+walmart,e-commerce,TBD,"11188 Citrus Ave, Fontana, CA, 92337",United States of America,639500,2016,34.05055618,-117.4549789
+walmart,e-commerce,TBD,"East 56th Avenue and Jackson Gap Road , Aurora, CO, 80019",United States of America,TBD,2018,38.99854279,-105.5478134
+walmart,e-commerce,TBD,"4900 North Ridge Trail, Davenport, FL, 33897",United States of America,900000,2016,28.30277061,-81.5980072
+walmart,e-commerce,TBD,"Intersection of U.S. Highway 27 and Waverly Barn Road , Davenport, FL, 33897",United States of America,1000000,2016,28.30014992,-81.69245148
+walmart,e-commerce,7005,"3101 N. Highway 27, Carrollton, GA, 30117",United States of America,1000000,2002,33.63844681,-85.12020111
+walmart,e-commerce,TBD,"6055 S Fulton Pkwy, Union City, GA, 30349",United States of America,1200000,2015,33.61582184,-84.59880829
+walmart,e-commerce,6280,"9590 AllPoints Parkway, Plainfield, IN, 46123",United States of America,1200000,2015,39.74161148,-86.34844208
+walmart,e-commerce,7422,"2783 Commerce Center Boulevard, Lehigh Valley Industrial Park VII, Bethlehem, PA, 18015",United States of America,1200000,2014,NA,NA
+walmart,e-commerce,7356,"3215 Commerce Center Boulevard, Lehigh Valley Industrial Park VII, Bethlehem, PA, 18015",United States of America,1200000,2015,NA,NA
+walmart,e-commerce,4900,"5300 Westport Parkway , Fort Worth, TX, 76177",United States of America,788160,2013,32.970066,-97.250015
+walmart,e-commerce,TBD,"15101 N. Beach St., Fort Worth, TX, 76177",United States of America,1002620,2016,32.96910858,-97.28874969
+walmart,export,6050,"40781 Black Diamond, Laredo, TX, 78045",United States of America,191700,1992,27.71946341,-99.71860819
+walmart,optical,6028/6044,"801 Corda Blvd., Crawfordsville, IN, 47933",United States of America,31400,1993,40.05073166,-86.87097168
+walmart,optical,9149,"2314 W 6th St, Fayetteville, AR, 72701-6219",United States of America,64500,1987,36.05464585,-94.19160001
+walmart,optical,TBD,"9029 Directors Row, Dallas, TX, 75247",United States of America,38918,2003,32.81828308,-96.89147186
+walmart,pharmacy,6001,"2252 North 8th Street, Rogers, AR, 72756",United States of America,150000,1976,36.35267639,-94.12863159
+walmart,pharmacy,6045,"1201 Moberly Lane, Bentonville, AR, 72716",United States of America,40000,2001,36.35992432,-94.18238831
+walmart,pharmacy,6032,"13231 11th Ave, Hanford, CA, 93230",United States of America,70900,1994,36.28092957,-119.6532898
+walmart,pharmacy,6013,"4501 Wal-Mart Way, Tifton, GA, 31794",United States of America,86500,1988,31.42775215,-83.48449722
+walmart,pharmacy,6046,"11121 Elliot Place, Williamsport, MD, 21795",United States of America,66300,1997,39.58707809,-77.82892609
+walmart,print/photo,6058,"1108 S.E. 10TH Street, Bentonville, AR, 72712",United States of America,390000,1997,36.36022188,-94.19666201
+walmart,returns,6002,"1102 SE 5th St, Bentonville, AR, 72712",United States of America,225000,1975,36.36764087,-94.19648364
+walmart,returns,8098,"1901 SE 10th St, Bentonville, AR, 72712",United States of America,225000,2008,36.36025272,-94.19280633
+walmart,returns,9398,"601 N Walton Blvd, Bentonville, AR, 72712",United States of America,72000,2005,36.3781929,-94.22254944
+walmart,returns,9193,"6719 W. 350 North, Greenfield, IN, 46140",United States of America,456000,2016,39.83179092,-85.92910004
+walmart,returns,9195,"1900 Aerojet Way, North Las Vegas NV, 89030",United States of America,106700,1996,36.23797226,-115.122139
+walmart,returns,9196,"161 Enterprise Road, Johnstown, NY, 12095",United States of America,207600,1996,42.98720169,-74.39250183
+walmart,returns,9194,"5795 North Blackstock Road, Spartanburg, SC, 29303",United States of America,266400,2009,35.00188065,-82.03803253
+walmart,returns,9153,"2301 Corporation Parkway, Woodway (Waco), TX, 76712-6952",United States of America,220000,2004,31.49033928,-97.16565704
+walmart,returns,TBD,"Rogers, AR",United States of America,TBD,2013,36.33348083,-94.12471008
+walmart,returns,TBD,"Tahlequah, Oklahoma",United States of America,TBD,2013,35.91136169,-94.97267151
+walmart,tire,6033,"200 Interstate South Dr & 210 Interstate South Dr, McDonough, GA, 30253",United States of America,357120,2001,33.44818497,-84.18470001
+walmart,tire,6067,"4130 Port Blvd, Dallas, TX, 75241",United States of America,420000,2002,32.64923859,-96.75668335
+walmart,e-commerce,7005,"3101 N. Highway 27, Carrollton, GA, 30117",United States of America,1000000,2002,33.63844681,-85.12020111
+walmart,inbound-foreign,TBD,"McDonald Road, Irvington, AL",United States of America,2900000,TBD,30.5179,-88.242376
+walmart,inbound-foreign,4895,"4155 Wineville Avenue, Mira Loma, CA, 91752",United States of America,448000,2000,34.01247406,-117.5441666
+walmart,inbound-foreign,6060,"Building 4, 11900 Riverside drive, Mira Loma, CA, 91752",United States of America,650400,2001,34.01599884,-117.5451813
+walmart,inbound-foreign,6060,"Building 5, 4250 Hamner Ave. , Mira Loma, CA, 91752",United States of America,755100,1999,34.01052475,-117.55439
+walmart,inbound-foreign,6060,"Building 1, 4100 Hamner Ave., Mira Loma, CA, 91752",United States of America,901700,2000,34.01229095,-117.5544052
+walmart,inbound-foreign,6061,"299 A J Riggs Rd, Statesboro, GA, 30458",United States of America,2200000,1994,32.39143834,-81.83401532
+walmart,inbound-foreign,7074/7078,"26453 Center Point Dr, Elwood, IL, 60421",United States of America,3400000,2006,41.40557706,-88.13120104
+walmart,inbound-foreign,7622,"4554 Oscar Nelson Jr Dr, Baytown, TX, 77520",United States of America,4200000,2005,29.71563242,-94.91143718
+walmart,inbound-foreign,6088/4896,"9305 Pocahontas Trail, Williamsburg (James City), VA, 23185",United States of America,3000000,2000,37.198322,-76.59999
+walmart,domestic-inbound,6901,"509 SE Martin Luther King Jr Pkwy, Bentonville, AR, 72712",United States of America,18700,1994,36.36664581,-94.18480682
+walmart,domestic-inbound,6907,"280 De Berry St, Colton, CA, 92324",United States of America,125800,2006,34.02901077,-117.3322906
+walmart,domestic-inbound,6909,"11888 Mission Blvd, Mira Loma, CA, 91752",United States of America,599340,2009,34.02440262,-117.5456009
+walmart,domestic-inbound,6912,"600 Live Oak Ave, Irwindale, CA, 91706",United States of America,108850,2009,34.11128616,-117.9918137
+walmart,domestic-inbound,7101,"1200 Mason Dixon Line, Conley, GA, 30288",United States of America,53360,2011,33.66400909,-84.34317017
+walmart,domestic-inbound,6974,"6765 Imron Dr, Belvidere, IL, 61008",United States of America,177800,2011,42.25069046,-88.88376617
+walmart,domestic-inbound,7100,"1340 141st Street, Hammond, IN, 46327",United States of America,150720,2011,41.63934633,-87.49666616
+walmart,domestic-inbound,7976,"423 Pitts School Rd , Concord, NC, 28027",United States of America,104380,2011,35.35213575,-80.6582395
+walmart,domestic-inbound,7837,"121 Powerline Road, Tannersville, PA, 18372",United States of America,103700,2012,41.36846535,-75.1516825
+walmart,domestic-inbound,7840,"1980 Getwell Road, Memphis, TN, 38111",United States of America,93100,2011,35.078022,-89.92764282
+walmart,domestic-inbound,6956,"5210 Catron Dr, Dallas, TX, 75227",United States of America,77000,2010,32.78852463,-96.67424774
+sam's club,general merchandise,4803/6699,"3301 East Park Avenue, Searcy, AR, 72143-9027",United States of America,682700,1978,35.24054337,-91.70126343
+sam's club,general merchandise,6299,"23701 West Southern Avenue, Buckeye, AZ, 85326-4928",United States of America,252000,2000,33.3880043,-112.5579224
+sam's club,general merchandise,8230,"1600 Tide Court, Woodland, CA, 95776-6210",United States of America,65200,2004,38.67990494,-121.7457199
+sam's club,general merchandise,6493,"1000 S. Cucamonga Ave, Ontario, CA, 91761",United States of America,60000,1993,34.0534725,-117.6320133
+sam's club,general merchandise,6494,"7500 East Crossroads Blvd, Loveland, CO, 80538",United States of America,42600,1990,40.42881,-104.968482
+sam's club,general merchandise,6275,"2562 Cabot Commerce Circle, Building 1, Alta Lakes Commerce Center, Jacksonville, FL, 32226",United States of America,129665,2013,NA,NA
+sam's club,general merchandise,8229,"3010 Saddlecreek Rd. Bldg. 19, Lakeland, FL, 33801",United States of America,66400,1991,28.07566261,-81.8989563
+sam's club,general merchandise,6499,"140 Fleet Drive, Villa Rica, GA, 30180-1090",United States of America,60000,1995,33.74566689,-84.94631186
+sam's club,general merchandise,6598,"1325 Central Ave., University Park, IL, 60484",United States of America,49200,2005,41.42839126,-87.74761766
+sam's club,general merchandise,8232,"488 West Muskegon Drive, Greenfield, IN, 46140-3057",United States of America,85200,1993,39.81114578,-85.7765274
+sam's club,general merchandise,6496,"233 S 42nd Street, Kansas City, KS, 66106",United States of America,81080,1988,39.09302139,-94.67440796
+sam's club,general merchandise,6495,"14557 Industry Dr., Hagerstown, MD, 21742",United States of America,40000,1994,39.71502766,-77.72141039
+sam's club,general merchandise,6596,"18650 Dix-Toledo Rd., Brownstown Township, MI, 48193",United States of America,60000,1992,42.1497612,-83.26625061
+sam's club,general merchandise,6697,"6301 W. Old Shakopee Rd., Bloomington, MN, 55438",United States of America,180300,1995,44.8064537,-93.36429596
+sam's club,general merchandise,4792,"185 J M Tatum Industrial Dr , Hattiesburg, MS, 39401",United States of America,60000,2008,31.26418686,-89.26797485
+sam's club,general merchandise,8206,"1911 Continental Blvd., Charlotte, NC, 28273",United States of America,63400,1991,35.1296284,-80.93153648
+sam's club,general merchandise,TBD,"2837 Senator Ralph Scott Parkway, Mebane, NC, 27302",United States of America,77000,2016,36.13056183,-79.26565552
+sam's club,general merchandise,6597,"40 Londonderry Turnpike, Building 3PSI, Hooksett, NH, 03106-2038",United States of America,26200,2005,43.0158446,-71.40033893
+sam's club,general merchandise,6492,"2150 International Pkwy., N. Canton, OH, 44720",United States of America,75000,1993,40.91194153,-81.45695496
+sam's club,general merchandise,8231,"26 Stauffer Industrial Park, Taylor, PA, 18517",United States of America,70000,1990,41.39582053,-75.70223875
+sam's club,general merchandise,6016,"3900 North Ih 35, New Braunfels, TX, 78130",United States of America,60000,1998,29.73512459,-98.06399536
+sam's club,general merchandise,6903/8235,"830 East Centre Park Blvd., Desoto, TX, 75115",United States of America,92800,1993,32.622161,-96.836921
+sam's club,general merchandise,6698,"451 Farm to Market 686, Dayton, TX, 77535",United States of America,100000,1995,30.95488071,-83.73162523
+sam's club,general merchandise,6289,"2810 E Marshall Ave Ste A, Tacoma, WA, 98421",United States of America,103200,1993,47.2518158,-122.393898
+sam's club,general merchandise,TBD,"Kimrey Road, Hawfields (Mebane), NC, 27302",United States of America,77000,2016,36.050279,-79.328786
+walmart,closed,6000,"702 Southwest 8th Street, Bentonville, AR, 72712",United States of America,236800,1970,36.36664963,-94.21923828
+walmart,closed,6060,"11850 Riverside Drive, Mira Loma, CA, 91752",United States of America,656700,2001,34.01590729,-117.543045
+walmart,closed,6060,"12400 Riverside Drive, Mira Loma, CA, 91752",United States of America,397630,2001,34.01671219,-117.5545807
+walmart,closed,7025,"2356 Fleetwood Drive, Riverside, CA, 92509",United States of America,253000,2001,34.01250458,-117.3811798
+walmart,closed,7086,"163 Portside Court, Savannah, GA, 31407",United States of America,800000,2001,32.159584,-81.195968
+walmart,closed,9193,"3333 N Franklin Rd, Indianapolis, IN, 46226-6314",United States of America,266400,1996,39.81755829,-86.02503967
+walmart,closed,4894,"1080 North Regional Parkway North, Charleston, SC, 29492",United States of America,560000,2002,32.87672043,-80.00927734
+walmart,closed,7054/7081,"2525 Rohr Road, Lockbourne, OH, 43137-9296",United States of America,414000,2001,39.84202576,-82.93731689
+walmart,closed,6052,"19688 Van Ness, Torrance, CA, 90501",United States of America,1087500,1994,33.8517724,-118.31771
+amazon,general merchandise,PHX3,"6835 West Buckeye Road, Phoenix, Arizona,  85043",United States of America,1009400,2007,33.43321609,-112.2066193
+amazon,general merchandise,PHXS,"16920 W. Commerce Dr. , Goodyear, Arizona,  85338- 3620",United States of America,820400,2008,33.41204071,-112.4217987
+amazon,general merchandise,PHX6/ TFC1,"4750 & 5050 West Mohave Street, Phoenix, Arizona,  85043-4428",United States of America,1207000,2010,33.43011475,-112.193512
+amazon,general merchandise,PHX7/ PHX8,"800 N. 75th Ave, Phoenix,
+Arizona,  85043-3101",United States of America,1260000,2011,33.45700836,-112.2253647
+amazon,general merchandise,ONT2/ ONT3,"1910 E. Central Ave., Building 3. San Bernardino. California. USA. 92408-0123",United States of America,951700,2012,34.08818054,-117.2460022
+amazon,general merchandise,ONT6,"24208 San Michelle Rd, Moreno Valley, California,  92551- 9561",United States of America,1250000,2014,33.87011535,-117.2433928
+amazon,general merchandise,ONT8,"24300 Nandina Ave, Moreno Valley, California,  92551- 9534",United States of America,769300,2014,33.8682251,-117.2370529
+amazon,general merchandise,ONT9,"2125 W. San Bernardino Ave, Redlands, California,  92374-5005",United States of America,700000,2014,34.07572937,-117.2283554
+amazon,general merchandise,SNA6/ SNA9,"5250 Goodman Way, Eastvale. California.  91752-5088",United States of America,1007700,2016,33.93284988,-117.4425735
+amazon,general merchandise,SNA7/ SNA8,"555 East Orange Road, Gateway South Building 3, San
+Bernardino, California,  92408-2453",United States of America,1102600,2016,34.08449936,-117.2637329
+amazon,general merchandise,,"Metro Air Parkway, Sacramento. California, USA. 95835",United States of America,855000,2017,38.67112732,-121.5257416
+amazon,general merchandise,OAK3,"255 Park Center Drive,
+Patterson, California,  95363-8876",United States of America,1000000,2013,37.46884324,-121.1643981
+amazon,general merchandise,OAK4/ OAK6,"1555 N. Chrisman Rd., Tracy, California.  95304-9370",United States of America,1200000,2013,37.74566269,-121.4060287
+amazon,general merchandise,SJC7,"188 Mountain House Parkway, Tracy, California, USA. 95377- 8906",United States of America,1001400,2016,37.74240875,-121.5316162
+amazon,general merchandise,XUSD,"1909 Zephyr Street. Stockton. California,  95206",United States of America,508000,2013,37.9180069,-121.2510071
+amazon,general merchandise,SNA4,"2496 W Walnut, Rialto, California, USA. 92376-3009",United States of America,882200,2015,34.12850529,-117.422624
+amazon,general merchandise,,"17871 Von Karman Ave.. Irvine. California, USA. 92614",United States of America,187800,TBD,33.68788147,-117.8475189
+amazon,general merchandise,BDL1,"801 Day Hill Road, Windsor, Connecticut,  06095",United States of America,1017500,2015,41.87647372,-72.69646347
+amazon,general merchandise,PHL1,"1 Centerpoint Blvd, New Castle. Delaware. USA. 19720",United States of America,202000,1997,39.663902,-75.59027
+amazon,general merchandise,PHL7/ PHL9,"560 Merrimac Ave, Middletown, Delaware,  19709-4652",United States of America,800000,2012,39.43867111,-75.73313904
+amazon,general merchandise,TPA1,"3350 Laurel Ridge Ave, Ruskin, Florida,  33570-5526",United States of America,1017600,2014,27.69631386,-82.44941711
+amazon,general merchandise,TPA2,"1760 County Line Rd. ,
+Lakeland, Florida,  33811- 1808",United States of America,1000000,2014,28.02031517,-82.0531311
+amazon,general merchandise,JAX1,"12900 Pecan Park Road, Jacksonville. Florida.  32218",United States of America,855000,2017,30.46714514,-81.67237937
+amazon,general merchandise,MIA1,"Officer Simmins Arlington Avenue, Opa-locka, Florida,  33054",United States of America,855000,2017,25.90579224,-80.25978088
+amazon,general merchandise,ATL7,"6855 Shannon Parkway, Union City. Georgia. USA. 30291",United States of America,517100,2015,33.57589513,-84.53887627
+amazon,general merchandise,ATL8,"2201 Thornton Road, Lithia Springs, Georgia,  30122- 3895",United States of America,733200,2015,33.74882586,-84.59008969
+amazon,general merchandise,MGE1,"650 Broadway Ave., Jackson. Braselton, Georgia,  30517- 3002",United States of America,600000,2016,34.13370895,-83.79026794
+amazon,general merchandise,IND1,"4255 Anson Blvd , Whitestown, Indiana,  46075-4412",United States of America,1000000,2008,39.97857347,-86.38423003
+amazon,general merchandise,IND2/ IND3,715 & 717 Airtech Parkway. Plainfield. Indiana.  46168,United States of America,947300,2008,39.700435,-86.342849
+amazon,general merchandise,IND4,"710 Soth Girls School Road, Indianapolis, Indiana,  46231-1132",United States of America,902900,2011,39.72114944,-86.32675934
+amazon,general merchandise,IND5,800 South Perry Road. Plainfield. Indiana. USA. 46168-7937,United States of America,925800,2011,39.69480515,-86.35845184
+amazon,general merchandise,IND7,"9101 Orly Drive, Indianapolis, Indiana,  46241",United States of America,TBD,2016,39.67516327,-86.32415771
+amazon,general merchandise,SDF8,"900 Patrol Road, Jeffersonville. Indiana. USA. 47130-7761",United States of America,1200000,2012,38.37905154,-85.69092259
+amazon,general merchandise,XUSE,"5100 S. Indianapolis Road, Whitestown, Indiana,  46075",United States of America,624000,2013,39.96574447,-86.38152838
+amazon,general merchandise,MDW2,401 E. Caraway Road. Joliet. Illinois.  60433-9462,United States of America,475100,2015,41.48105979,-88.07099886
+amazon,general merchandise,MDW4,"201 Emerald Drive, Joliet. Illinois,  60433-3281",United States of America,700000,2016,41.48566818,-88.0802002
+amazon,general merchandise,STL4,"3050 Gateway Commerce Center Drive South, Edwardsville,
+Illinois.  62025-2815",United States of America,769500,2016,38.83188248,-89.93251038
+amazon,general merchandise,STL6,"3931 Lakeview Corporate Dr, Edwardsville, Illinois,  62025-2801",United States of America,720000,2016,38.79133925,-90.08177653
+amazon,general merchandise,MDW6,"1125 Remington Blvd,
+Romeoville. Illinois.  60446- 6529",United States of America,750000,2016,41.67219543,-88.1155014
+amazon,general merchandise,MDW7,"6521 W. Monee Manhattan Road, Monee, Illinois,  60449",United States of America,856600,2017,41.42576599,-87.77007294
+amazon,general merchandise,MKC4,"19645 Waverly Rd, Gardner. Kansas.  66030",United States of America,822100,2016,38.77216721,-94.94548035
+amazon,general merchandise,MCI1,"Turner Commerce Center, 6925 Riverview Ave. Kansas City, Kansas,  66102",United States of America,855000,2017,39.11210251,-94.68661499
+amazon,general merchandise,MCI7,"27200 West 157th Street Johnson (New Century), Kansas. USA. 66031",United States of America,446500,2016,38.48472595,-98.38017273
+amazon,general merchandise,CVG8,"7968 Kentucky Dr Florence. Kentucky,  41042",United States of America,172100,2015,38.98320571,-84.62712966
+amazon,general merchandise,CVG1,"Bldg. F Park W Intl 1155 Worldwide Blvd., Hebron, Kentucky,  41048-8648",United States of America,484000,2005,NA,NA
+amazon,general merchandise,CVG2,"1600 Worldwide Blvd., Hebron, Kentucky,  41048",United States of America,543000,2005,39.08734512,-84.72550964
+amazon,general merchandise,CVG3,3680 Langley Dr.. Hebron. Kentucky. USA. 41048,United States of America,711400,2007,39.06285477,-84.71887207
+amazon,general merchandise,LEX1/ LEX3,"1850 Mercer Drive, Lexington, Kentucky,  40511",United States of America,650000,2000,38.07781599,-84.53165241
+amazon,general merchandise,LEX2,"172 Trade St., Lexington. Kentucky.  40511",United States of America,380000,2006,38.07469559,-84.54927063
+amazon,general merchandise,SDF1,"1188 South Columbia Avenue , Campbellsville, Kentucky,  42718-1337",United States of America,727000,1999,37.32605986,-85.35279728
+amazon,general merchandise,SDF2,"4360 Robards Ln, Louisville, Kentucky, USA. 40218",United States of America,110000,2005,38.19809563,-85.69172725
+amazon,general merchandise,SDF4,"376 Zappos.com Blvd. Shepherdsville, Kentucky,  40165",United States of America,823000,2005,37.97999315,-85.68525307
+amazon,general merchandise,SDF6,"271 Omega Pkwy, Shepherdsville, Kentucky,  40165",United States of America,118000,2012,37.97462404,-85.68337351
+amazon,general merchandise,SDF7,"300 Omicron Court, Cedar Grove Business Park, Shepherdsville. Kentucky,  40165",United States of America,281000,2012,37.52723312,-85.28762054
+amazon,general merchandise,SDF9,"100 W. Thomas P. Echols Lane. St. 3, Shepherdsville, Kentucky, USA. 40165-7594",United States of America,600000,2013,37.9840339,-85.68722114
+amazon,general merchandise,BWI2,"2010 Broening Highway. Baltimore, Maryland,  21224-6027",United States of America,1017600,2015,39.26754761,-76.54810333
+amazon,general merchandise,B0S7,"1180 Innovation Way, Fall River, Massachusetts.  02722- 4766",United States of America,1000000,2016,41.75883102,-71.09461975
+amazon,general merchandise,MSP1,"2601 4th Ave E. Shakopee, Minnesota,  55379-1726",United States of America,820000,2016,44.79749389,-93.48785944
+amazon,general merchandise,LAS2,"3837 Bay Lake Trail, North Las Vegas. Nevada.  89030",United States of America,283900,2008,36.228694,-115.105308
+amazon,general merchandise,,"North Lamb Boulevard and Tropical Parkway, North Las Vegas, Nevada,  89081",United States of America,813100,2017,36.26928024,-115.07987
+amazon,general merchandise,RNO3,"555 Milan Dr, Sparks, Nevada. USA. 89434",United States of America,566900,2010,39.5494663,-119.4539568
+amazon,general merchandise,RNO4,"8000 North Virginia Street , Reno, Nevada,  89506",United States of America,634000,2015,39.6124115,-119.8670425
+amazon,general merchandise,BOS1,"10 State Street, Nashua, New Hampshire. USA. 03063",United States of America,63800,2007,42.79281221,-71.52822398
+amazon,general merchandise,EWR4,"50 New Canton Way, Robbinsville, New Jersey,  08691-2350",United States of America,1200000,2014,40.22016907,-74.63337708
+amazon,general merchandise,ABE8,"309 Cedar Lane. Florence, New Jersey, USA. 08518-2802",United States of America,613900,2016,40.10806985,-74.79728691
+amazon,general merchandise,,"698 Route 46 West, Teterboro, New Jersey,  07608",United States of America,617000,2017,40.87866974,-74.07634735
+amazon,general merchandise,CLT2,"10240 Old Dowd Road. Mecklenburg. Charlotte, North Carolina, USA. 28214-8082",United States of America,397800,2016,35.53934479,-79.18541718
+amazon,general merchandise,CMH1,"11903 National Rd SW, Etna, Ohio,  43062-7793",United States of America,855000,2016,39.95681539,-82.7117984
+amazon,general merchandise,CMH2,"6050 Gateway Court. Obetz. Ohio,  43125",United States of America,1000000,2016,39.8875885,-83.04450989
+amazon,general merchandise,ABE2,"705 Boulder Drive, Breinigsville, Pennsylvania,  18031",United States of America,600000,2010,40.55769257,-75.61895549
+amazon,general merchandise,ABE3,"650 Boulder Drive , Breinigsville. Pennsylvania. USA. 18031-1536",United States of America,483000,2011,40.55628967,-75.62169647
+amazon,general merchandise,AVP1,"550 Oak Ridge Road, Hazleton, Pennsylvania,  18202-9361",United States of America,615600,2008,40.92230606,-76.04891205
+amazon,general merchandise,AVP2/ AVP3,"298 1st Avenue, Gouldsboro. Pennsylvania,  18424-9464",United States of America,1250000,2010,41.26403354,-75.49965017
+amazon,general merchandise,PHL4,"21 Roadway Drive, Carlisle, Pennsylvania,  17015",United States of America,558700,2010,40.22678757,-77.11352539
+amazon,general merchandise,PHLS,500 McCarthy Dr.. Lewisberry. Pennsylvania. USA. 17339-8725,United States of America,750000,2010,40.16947299,-76.84068628
+amazon,general merchandise,PHL6,"675 Allen Rd. , Carlisle, Pennsylvania,  17015-7788",United States of America,1206500,2010,40.17534256,-77.23203278
+amazon,general merchandise,ABES,"6455 Allentown Boulevard. Harrisburg, Pennsylvania. USA. 17112",United States of America,200000,TBD,40.32524872,-76.77259064
+amazon,general merchandise,XUSC,"40 Logistics Drive, Carlisle,
+Pennsylvania,  17013",United States of America,421200,2013,40.18899155,-77.2264328
+amazon,general merchandise,MDT1,"2 Ames Drive, Building #2, Carlisle. Pennsylvania, USA. 17015",United States of America,750000,2015,40.17240143,-77.23470306
+amazon,general merchandise,ABE4,"1610 Van Buren Road, Easton, Pennsylvania,  18045-7807",United States of America,1106400,2016,40.73141456,-75.27639113
+amazon,general merchandise,AVP8,"250 Enterprise Way, Pittston. Pennsylvania,  18640-5000",United States of America,399500,2016,41.31594703,-75.76305784
+amazon,general merchandise,CAE1,"4400 12 Street Extension, West Columbia (Cayce), South Carolina,  29172-3300",United States of America,1250000,2011,33.91062927,-81.04978943
+amazon,general merchandise,GSP1,402 John Dodd Rd. Spartanburg. South Carolina.  29303- 6312,United States of America,1016100,2012,35.00870034,-82.02914268
+amazon,general merchandise,CHS1,"7290 Investment Drive. N Charleston, South Carolina.  29418",United States of America,128200,2016,32.924789,-80.059669
+amazon,general merchandise,BNA1,"14840 Central Pike. Lebanon.
+Tennessee,  37090-8119",United States of America,449000,2011,36.1309166,-86.40607452
+amazon,general merchandise,BNA2,"500 Duke Dr, Lebanon, Tennessee,  37087-8123",United States of America,1200000,2013,36.13056946,-86.40444946
+amazon,general merchandise,BNA3,"2020 Joe B Jackson Pkwy. Murfreesboro, Tennessee. USA. 37127-7792",United States of America,1000000,2012,35.77748489,-86.36366272
+amazon,general merchandise,CHA1,"7200 Discovery Drive, Chattanooga, Tennessee,  37416-1749",United States of America,1020000,2011,35.07612991,-85.15158844
+amazon,general merchandise,CHA2,"225 Infinity Dr NW, Charleston, Tennessee,  37310-1400",United States of America,1200000,2011,35.28287506,-84.8131485
+amazon,general merchandise,DFW6,"940 W. Bethel Road . Coppell, Texas,  75019-4424",United States of America,1000000,2013,32.95799637,-97.01693726
+amazon,general merchandise,DFW7,"700 Westport Parkway, (Haslet) Fort Worth. Texas.  76177- 4513",United States of America,1100000,2013,32.97071457,-97.33527374
+amazon,general merchandise,F1W3,"15201 Heritage Parkway, Fort Worth, Texas,  76177-2517",United States of America,1000000,2016,32.99388123,-97.30268097
+amazon,general merchandise,FTW1,"33333 Lyndon B Johnson Freeway, Dallas. Texas. USA. 75241-7203",United States of America,500000,2015,32.65597321,-96.74945176
+amazon,general merchandise,XUSB,"14900 Frye Road. Fort Worth, Texas,  76155",United States of America,495000,2014,32.81837845,-97.04308319
+amazon,general merchandise,SAT1,"6000 Enterprise Avenue,
+Schertz. Texas, USA. 78154- 1461",United States of America,1260000,2013,29.59712774,-98.29317905
+amazon,general merchandise,SAT2,"1401 East McCarty Lane, San Marcos, Texas,  78666- 8969",United States of America,855000,2016,29.83211003,-97.96341687
+amazon,general merchandise,HOU2,"Pinto Business Park: Interstate 45 North and Beltway 8,
+Houston. Texas. USA.",United States of America,855000,2017,NA,NA
+amazon,general merchandise,,"2701 W. Bethel Road, Coppell (Tarrant), Texas,  75261- 4015",United States of America,1000000,2016,32.95497894,-97.02039337
+amazon,general merchandise,RIC1,"5000 Commerce Way, (Dinwiddie) Petersburg, Virginia,  23803-6917",United States of America,1100000,2012,37.19585037,-77.50269318
+amazon,general merchandise,RIC2,"1901 Meadowville Technology Parkway, Chester, Virginia,  23836-2841",United States of America,1200000,2012,37.35132962,-77.32397608
+amazon,general merchandise,BFI11 BFIX,"1800 140th Avenue E., Sumner. Washington, USA. 98390-9624",United States of America,492000,2011,47.24265289,-122.2439041
+amazon,general merchandise,BFI3,"2700 Center Drive, Dupont, Washington,  98327-9607",United States of America,1000000,2015,47.11262131,-122.6400223
+amazon,general merchandise,BFI4,"21005 64th Ave. S. Kent, Washington.  98032-2423",United States of America,800000,2016,47.41388083,-122.2545062
+amazon,general merchandise,MKE1,"3501 120th Ave, Kenosha, Wisconsin,  53144-7502",United States of America,1100000,2015,42.60681108,-87.95153663
+amazon,food,ONT4/ ONT7,"2020 E. Central Ave.. Building 4. San Bernardino, California,  92408-2606",United States of America,514600,2013,34.09033203,-117.2401962
+amazon,food,OAK6,"1555 N. Chrisman Rd. Tracy, California,  95304-9370",United States of America,94560,2013,37.74566269,-121.4060287
+amazon,food,,"2232 Northmont Parkway, Duluth, Georgia,  30096",United States of America,88800,2017,33.97599792,-84.11444092
+amazon,food,ORD6,"1250 N. Mittel Blvd, Wood Dale, Illinois,  60191",United States of America,82100,2016,41.98699951,-87.98768616
+amazon,food,BOS6,"201 Beacham Street, Everett (Chelsea), Massachusetts,  02149-5518",United States of America,96600,2015,42.39433117,-71.05556779
+amazon,food,EWR61 EWR7,"275 Omar Ave., Avenel, New Jersey,  07001-2225",United States of America,391700,2013,40.58513895,-74.26098056
+amazon,food,EWR8/ EWR9,"8003 Industrial Ave, Building A, Carteret, New Jersey,  07008-3529",United States of America,1064500,2016,40.59336528,-74.22606893
+amazon,food,LGA7,"380 Middlesex Ave, Carteret, New Jersey,  07008-3446",United States of America,794400,2016,40.56445643,-74.22407269
+amazon,food,LGA8,"201 Grumman Rd. W. , Bethpage, New York,  11714",United States of America,161400,2016,40.74793625,-73.49291992
+amazon,food,FTW4,"4601 Gold Spike Drive, Fort Worth, Texas,  76106",United States of America,318500,2016,32.82837296,-97.35449219
+amazon,food,PTX1,"2101 Danieldale Road , Lancaster, Texas,  75134- 1551",United States of America,TBD,2016,32.633358,-96.79886627
+amazon,food,BWI1,"45121 Global Plaza, Sterling, Virginia,  20166",United States of America,80900,2013,38.98669124,-77.43954375
+amazon,food,BWI6,"5617 Industrial Dr, Suite A, Springfield, Virginia,  22151- 4410",United States of America,127300,2015,38.79845428,-77.1696701
+amazon,food,SEA6/ SEA8,"1227 124th Ave NE, Building 2, Bellevue, Washington.  98005-2111",United States of America,313300,2007,47.62256674,-122.1751095
+amazon,sort,PHX8,"800 N. 75th Ave. Phoenix,
+Arizona, USA. 85043-3101",United States of America,TBD,2010,33.45700836,-112.2253647
+amazon,sort,OAKS/ OAK7,"38811 Cherry Street, Newark, California,  94560-4939",United States of America,574700,2014,37.51973343,-122.0154572
+amazon,sort,ONTS,"2020 E. Central Ave., San Bernardino, California,  92408-2606",United States of America,TBD,2013,34.09033203,-117.2401962
+amazon,sort,DENS,"19799 E. 36th Avenue, Majestic Commercenter Building #29, Aurora, Colorado,  800118189",United States of America,452400,2016,NA,NA
+amazon,sort,BDLS,"29 Research Parkway, Wallingford, Connecticut,  06492-1927",United States of America,184100,2015,41.49078816,-72.76265636
+amazon,sort,MCO5,"305 Deen Still Road , Davenport, Florida,  33897-9409",United States of America,270000,2014,28.25149727,-81.66416931
+amazon,sort,MIA5/ MIA6,"1900 NW 132nd Place , Miami (Dural), Florida,  33182- 1920",United States of America,335800,2014,28.49308777,-82.47229004
+amazon,sort,ATL6,"4200 North Commerce, East Point, Atlanta, Georgia,  30344-5707",United States of America,301200,2014,33.64346695,-84.50001526
+amazon,sort,MDWS,"1111 N. Cherry Ave., Goose Island, Illinois,  60642",United States of America,52000,2015,41.90364456,-87.65280151
+amazon,sort,MCIS,"16851 W 113th St, Lenexa Logistics Center, Lenexa, Kansas,  66219",United States of America,267000,2014,38.48472595,-98.38017273
+amazon,sort,CVG5/ CVG7,"2285 Litton Way, Hebron, Kentucky,  41048-8435",United States of America,598000,2013,39.07458496,-84.71832275
+amazon,sort,BWIS,"5001 Holabird Ave., Baltimore, Maryland,  21224-6026",United States of America,345000,2014,39.27175976,-76.55126318
+amazon,sort,BOSS,"1000 Technology Center Drive, Stoughton, Massachusetts,  02072-4744",United States of America,332700,2014,42.14894485,-71.06182098
+amazon,sort,DTWS,"Brownstown Business Center South, Building 9, 19991 Brownstown Center Drive, Trenton, Michigan,  48183",United States of America,210000,2015,NA,NA
+amazon,sort,MSP5,"5825 11th Ave. East, Shakopee, Minnesota,  55379-3810",United States of America,162000,2015,44.78850937,-93.44298553
+amazon,sort,ACYS,"2277 Center Square Rd , Swedesboro, Logan Township, New Jersey,  08085",United States of America,202900,2014,39.77508232,-75.37987679
+amazon,sort,EWRS,"301 Blair Road #100,
+Woodbridge (Avenel), New Jersey.  07001-2225",United States of America,562200,2013,40.58503342,-74.2547226
+amazon,sort,CLTS,"1745 Derita Rd, Concord, North Carolina,  28027-3353",United States of America,222500,2014,35.39052889,-80.71871728
+amazon,sort,RDUS,"1805 -RN Alexander Drive, Durham, North Carolina,  27703-8389",United States of America,324500,2016,35.96364594,-78.80236816
+amazon,sort,CLES,"8685 Independence Parkway, Twinsburg, Ohio,  44087- 1971",United States of America,248000,2016,41.35897827,-81.52348328
+amazon,sort,PDXS,"5647 NW Huffman Street, Washington, Hillsboro, Oregon, USA. 97124-5848",United States of America,303000,2016,43.93881226,-120.5585938
+amazon,sort,PITS,"2250 Roswell Drive, Pittsburg, Pennsylvania,  15205-1800",United States of America,250000,2015,40.89651108,-77.83875275
+amazon,sort,BNAS,"50 Airways Blvd. , Nashville, Tennessee,  37217-2516",United States of America,214000,2014,36.13019562,-86.69237518
+amazon,sort,DFW8/ DFW9,"2700 Regent Blvd, Irving, Texas,  75063",United States of America,428500,2014,32.91731291,-96.98073126
+amazon,sort,HOU1,"8120 Humble Westfield Rd, Humble, Texas,  77338- 4142",United States of America,240000,2014,30.00127494,-95.30241944
+amazon,sort,SATS,"1410 S. Callaghan Road, Bexar, San Antonio, Texas,  78227 2204",United States of America,193900,2015,29.40797043,-98.6267395
+amazon,sort,RIC3,"1901 Meadovvville Technology Parkway, Chesterfield, Virginia,  23836-2841",United States of America,TBD,2012,37.35132962,-77.32397608
+amazon,sort,BFIS,"20529 59th Place South,
+Building B, Kent, Washington,  98032",United States of America,318200,2014,47.4195604,-122.2612111
+amazon,sort,MKES,"11211 Burlington Road, Kenosha, Wisconsin.  53144-7449",United States of America,60000,2014,42.61226133,-87.94414915
+amazon,delivery sort,DPX1,"500 S. 48th Street. Phoenix, Arizona. USA. 85034",United States of America,62900,TBD,33.44130658,-111.9784793
+amazon,delivery sort,DSF1,"990 Beecher St, San Leandro, California,  94577",United States of America,TBD,2013,37.72068787,-122.1842117
+amazon,delivery sort,DSF2,"San Francisco Bay Area. California, USA",United States of America,TBD,2013,39.44325638,-98.95733643
+amazon,delivery sort,DSF3,"1700 Montague Expy, San Jose, California,  95131",United States of America,TBD,2013,37.40308762,-121.8983765
+amazon,delivery sort,DSF4,"San Francsico Bay Area. California, USA",United States of America,TBD,2016,37.25510025,-119.6175232
+amazon,delivery sort,DSFS,"250 Utah Avenue, South San Francisco, California,  94080-6801",United States of America,111000,2016,37.64647293,-122.3967896
+amazon,delivery sort,DSF6,"6015 Giant Road. Richmond. California,  94080-6801",United States of America,224200,2016,37.97137833,-122.3551712
+amazon,delivery sort,DSD1,"7130 Miramar Rd. 300A, San Diego, California,  92121",United States of America,58400,2013,32.88198853,-117.1601486
+amazon,delivery sort,DSD2,"2777 Loker Ave W, Carlsbad. California,  92010-6517",United States of America,39700,2013,33.13138962,-117.2561569
+amazon,delivery sort,DLA1,"900 W Florence Ave, Inglewood, California,  90301",United States of America,27700,2013,33.96214676,-118.3723068
+amazon,delivery sort,DLA2,"5650 Dolly Ave, Buena Park. California,  90621",United States of America,330000,2013,33.88004684,-118.0072021
+amazon,delivery sort,DLA3,"5829 Smithway St, Commerce, California,  90040",United States of America,48400,2013,34.00526784,-118.147322
+amazon,delivery sort,DLA4,"9031 Lurline Ave, Chatsworth, California,  91311",United States of America,29200,2013,34.23420645,-118.5842706
+amazon,delivery sort,DLAS,"6250 Sycamore Canyon Blvd. Riverside, California. USA 92507- 0771",United States of America,36000,2016,33.93786621,-117.2973785
+amazon,delivery sort,,"Santa Ana, California, USA",United States of America,TBD,2015,33.74958038,-117.8742981
+amazon,delivery sort,DLA8,"2815 W. El Segundo Blvd., Hawthorne, California,  90250",United States of America,170000,2016,33.91869736,-118.3248444
+amazon,delivery sort,11,"15600 NW 15th Ave, Miami Gardens. Florida,  33169",United States of America,37400,2015,25.917249,-80.226478
+amazon,delivery sort,DMI2,"3200 Northwest 67th Avenue, Miami, Florida,  33122",United States of America,117200,2017,25.80333687,-80.30512065
+amazon,delivery sort,1,"Tangelo Park, Orlando. Florida. USA.",United States of America,TBD,2016,28.45478058,-81.44618988
+amazon,delivery sort,DJA1,"11084 Cabot Commerce Circle, Jacksonville, Florida,  32226",United States of America,63000,2017,30.43309852,-81.57535382
+amazon,delivery sort,DCH1,"2801 S. Western Ave, Chicago, Illinois,  60608",United States of America,150000,2015,41.83996201,-87.68299866
+amazon,delivery sort,DCH2,"8220 Austin Ave, Morton Grove, Illinois,  60053",United States of America,39300,2015,42.03141022,-87.77781677
+amazon,delivery sort,DCH3,"4500 Western Ave, Lisle , Illinois,  60532",United States of America,68000,2015,41.803295,-88.097259
+amazon,delivery sort,DDC2,"861 E Gude Drive, Rockville, Maryland,  20850",United States of America,65000,2015,39.10181768,-77.14175418
+amazon,delivery sort,DB01,"201 Beacham Street, Everett (Chelsea), Massachusetts, USA. 02149-5518",United States of America,96600,2016,42.39376068,-71.03237152
+amazon,delivery sort,DB02,"500 Sprague St., Dedham, Massachusetts,  02026",United States of America,60500,2015,42.23316327,-71.13987833
+amazon,delivery sort,DMN1,"2811 Beverly Drive , Eagen, Minnesota,  55121",United States of America,142000,2016,44.853374,-93.136138
+amazon,delivery sort,DEW1,"2 Empire Boulevard Moonachie New Jersey, USA 07074",United States of America,75000,2015,40.83398438,-74.05044556
+amazon,delivery sort,,"75 Cohoes Ave. Green Island Village New York, USA 12183",United States of America,64000,2017,42.74739838,-73.69259644
+amazon,delivery sort,DNY1,"New York, New York, USA",United States of America,TBD,2014,40.7820015,-73.83170319
+amazon,delivery sort,DNY2,New York. New York. USA,United States of America,TBD,2014,40.7820015,-73.83170319
+amazon,delivery sort,DPO1,"Portland, Oregon, USA 75234",United States of America,TBD,2016,45.51179123,-122.6756287
+amazon,delivery sort,DPH1,"4219 Richmond Street Philadelphia, Pennsylvania, USA 19137",United States of America,65500,2015,39.99529704,-75.07731289
+amazon,delivery sort,DDC1,"12401 North Stemmons Fwy, Farmers Branch , Texas,  75234",United States of America,183000,2015,32.9143028,-96.90002829
+amazon,delivery sort,DSF2,"6705 E Marginal Way, Seattle , Washington,  98108",United States of America,26200,2015,47.54304998,-122.3281261
+amazon,delivery sort,DML1,"3935 W. Mitchell St., Milwaukee, Wisconsin,  53125",United States of America,50000,2016,43.01174927,-87.96323395
+amazon,prime now,UAZ1,"Phoenix, Arizona. USA. 85001",United States of America,TBD,2015,33.45404053,-112.0738525
+amazon,prime now,UCA1,"888 Tennessee Street, San Francisco, California,  94112",United States of America,39000,2015,37.76063137,-122.3895769
+amazon,prime now,UCA2,"Redondo Beach, California,  90277",United States of America,TBD,2015,33.83060837,-118.3839264
+amazon,prime now,UCA3,"11800 W Olympic Blvd, Los Angeles, California,  90064- 1100",United States of America,28800,2015,34.03272629,-118.4498291
+amazon,prime now,UCA4,"2006 McGaw Ave, Irvine, California,  92614",United States of America,45300,2015,33.6903038,-117.8457642
+amazon,prime now,UCAS,"Silver Lake, California,  90001",United States of America,TBD,2015,34.09181976,-118.2694244
+amazon,prime now,UCA6,"2727 Kurtz St, San Diego, California,  92110",United States of America,37800,2015,32.74994278,-117.2012863
+amazon,prime now,UCA7,"222 Commercial Street, Sunnyvale, California,  94085-4508",United States of America,24000,2015,37.37840271,-122.0076981
+amazon,prime now,UCA8,"3100 San Pablo Ave. Ste 120, West Berkley, California,  94702",United States of America,21000,2015,37.25510025,-119.6175232
+amazon,prime now,UCA9,"2934 Ramona Avenue, Sacramento, California.  95826-3813",United States of America,20000,2016,38.54679489,-121.4175034
+amazon,prime now,,"3334 North San Fernando Road , Los Angeles, California,  90065-1417",United States of America,58900,2015,34.11740875,-118.2508545
+amazon,prime now,UFL3,"4440 East Adamo Drive, Tampa, Florida,  33605",United States of America,30000,2016,27.95224953,-82.36575317
+amazon,prime now,UFL4,"7469 Kingspointe Parkway, Orlando. Florida,  32819",United States of America,96000,2016,28.45963478,-81.43952942
+amazon,prime now,UGA1,"Atlanta, Georgia, USA",United States of America,TBD,2016,33.74831009,-84.39111328
+amazon,prime now,UGA2,"Atlanta, Georgia,  30318",United States of America,TBD,2016,33.79213715,-84.44793701
+amazon,prime now,UIL1,"Chicago, Illinois, USA",United States of America,TBD,2015,41.88425064,-87.63244629
+amazon,prime now,UIN1,"Indianapolis, Indiana. USA",United States of America,TBD,2015,39.76691055,-86.14996338
+amazon,prime now,UMD1,"Balltimore, Maryland, USA",United States of America,TBD,2015,39.29058075,-76.60926056
+amazon,prime now,UMN1,"763 Kasota Ave., Minneapolis. Minnesota.  55414",United States of America,35000,2015,44.98210162,-93.2151901
+amazon,prime now,UNV1,"3650 East Post Road, Suite E, Las Vegas, Nevada,  89120- 6297",United States of America,TBD,2015,36.0759201,-115.0951157
+amazon,prime now,JFK7,"7 W. 34th St., New York, New York,  10001-8100",United States of America,40000,2014,40.74919891,-73.98519897
+amazon,prime now,,"850 Third Ave., Liberty View Industrial Plaza, Brooklyn, NewYork,  11232",United States of America,TBD,2015,40.63266754,-73.96692657
+amazon,prime now,UNC1,Charlotte. North Carolina.  28201,United States of America,TBD,2015,35.22710419,-80.84321594
+amazon,prime now,UNC2,"3200 Bush Street, Raleigh, North Carolina,  27609-7503",United States of America,30000,2016,35.82393265,-78.61334229
+amazon,prime now,U0H1,"Winton Hills, Cincinnati, Ohio, USA",United States of America,TBD,2016,39.24153137,-84.48200989
+amazon,prime now,U0H2,"3563 Interchange Road, Columbus, Ohio,  43204",United States of America,45700,2016,39.97127533,-83.10050201
+amazon,prime now,UOR1,"2250 Northwest 22nd Avenue, Portland, Oregon,  97210",United States of America,TBD,2015,45.53874046,-122.6968414
+amazon,prime now,UPA1,"Philadelphia, Pennsylvania, USA",United States of America,TBD,2015,39.95227814,-75.1624527
+amazon,prime now,UTN1,"Nashville, Tennessee, USA",United States of America,TBD,2015,36.16783905,-86.7781601
+amazon,prime now,UTX1,"Irving, Texas,  75014",United States of America,TBD,2015,32.85503006,-96.97759247
+amazon,prime now,UTX2,"Austin, Texas,  73301",United States of America,TBD,2015,30.2200985,-97.74904633
+amazon,prime now,UTX3,"Houston, Texas,  77001",United States of America,TBD,2015,29.75804329,-95.36141205
+amazon,prime now,UTX4,"Dallas, Texas. USA",United States of America,TBD,2015,32.77814865,-96.79540253
+amazon,prime now,UVA1,"5617 Industrial Dr, Suite A, Springfield, Virginia,  22151- 4410",United States of America,126900,2015,38.79845428,-77.1696701
+amazon,prime now,UVA2,"Chesapeake, Virginia, USA",United States of America,TBD,2016,36.71429062,-76.24784088
+amazon,prime now,UVA3,"2034 Dabney Road, Richmond, Virginia,  23230",United States of America,11900,2015,37.57730708,-77.48223178
+amazon,prime now,UTXS,"San Antonio, Texas, USA",United States of America,TBD,2015,29.42457962,-98.49461365
+amazon,prime now,UWA1,"11710 118th Ave. N.E. , Building B, Kirkland, Washington,  98034",United States of America,38300,2015,47.705379,-122.18264
+amazon,prime now,UWA2,"13537 Aurora Ave. N., North
+Seattle, Washington,  98133",United States of America,38400,2015,47.728054,-122.345764
+amazon,prime now,UWA3,"2121 8th Ave., Seattle , Washington,  98121",United States of America,18900,2015,47.61683273,-122.3390808
+amazon,prime now,,"2401 Utah Ave South, First Floor, Seattle , Washington,  98134",United States of America,TBD,2016,47.57727051,-122.3373566
+amazon,prime now,,"1926 6th Ave. S., Seattle , Washington,  98134",United States of America,17500,2016,47.58581311,-122.3259039
