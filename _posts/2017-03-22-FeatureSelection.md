@@ -38,7 +38,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 ### Data Importing and Preprocessing
 
-The datafile used for the analysis can be found [here](https://www.dropbox.com/s/9pjs5c77q72cmu0/LCloanbook.xls). It consists of 123 attributes for over 60,000 loans collected between 2007 and 2015 First, we import our data as a pandas dataframe, and split our predictor and outcome variables. 
+The datafile used for the analysis can be found [here](/assets/downloads/LCloanbook.xls). It consists of 123 attributes for over 60,000 loans collected between 2007 and 2015 First, we import our data as a pandas dataframe, and split our predictor and outcome variables. 
 
 To prevent any of our variables from dominating our analysis, we scale our predictor variables. This lets the classification algorithms assign relatively equal weight to all of the potential predictors and prevents variables of larger magnitude from dominating. 
 
