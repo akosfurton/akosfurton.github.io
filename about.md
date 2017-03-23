@@ -9,6 +9,6 @@ I have always been fascinated by technology and using data to interpret informat
 
 Before studying at Imperial College, I studied [Mathematics](https://www.ma.utexas.edu/) and [Supply Chain Management](https://www.mccombs.utexas.edu/Departments/IROM) at The University of Texas at Austin. During that time, I was a part of [Texas 4000](http://www.texas4000.org/), a nonprofit that raises money for cancer research through a 4000 mile bicycle ride from Austin, Texas to Anchorage, Alaska. I have also spent semesters studying at the [University of New South Wales](https://www.unsw.edu.au/) and at the [Chinese University of Hong Kong](http://www.cuhk.edu.hk/english/index.html). 
 
-[Resume](https://drive.google.com/open?id=0B5FjbZuZokNdeVIwUF9RYV95Tzg)
+[Resume](/assets/downloads/resume.pdf)
 
 Thanks for reading!
