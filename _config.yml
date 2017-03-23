@@ -6,6 +6,7 @@ title:               Akos Furton
 tagline:             Statistics Made Simple
 url:                 www.akosfurton.com
 baseurl:             "akosfurton.com"
+paginate:            10
 
 excerpt_separator:   "\n\n"
 
@@ -29,6 +30,7 @@ github:
 
 # Gems
 gems:
+  - jekyll-paginate
   - jekyll-gist
 
 pages_list:
